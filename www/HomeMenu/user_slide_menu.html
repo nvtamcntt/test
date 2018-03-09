@@ -1,0 +1,30 @@
+<nav id="globalNavi" class="scroll border-box">
+	<figure class="logo"><img src="images/common/sidemenu_logo.png" alt=""></figure>
+	<ul>
+		<li ng-click="menu_click($event);footer('base_user_home');user_home();"><a data-num="3" class="current"><span class="no_click">ホーム</span></a></li>
+		<li ng-click="menu_click($event);footer('base_timeline');timeline();"><a data-num="1"><span class="no_click">タイムライン</span></a></li>
+		<li ng-click="menu_click($event);footer('base_mytraining');MyTraining();"><a data-num="2"><span class="no_click">マイトレ</span></a></li>
+		<li ng-click="menu_click($event);footer('base_trainer_list');trainer_list();"><a data-num="4"><span class="no_click">パートナー</span></a></li>
+		<li ng-click="menu_click($event);chat_list();" class="side_icon_5"><a data-num="5"><span class="no_click">チャット</span></a></li>
+		<li ng-click="acr_open($event);" class="side_icon_12 acordion"><a><span class="no_click">つぶやき／管理</span></a>
+			<ul>
+				<li ng-click="menu_click($event);footer('base_timeline');tweet();"><a data-num="1"><span>つぶやく</span></a></li>
+				<li ng-click="menu_click($event);footer('base_management');meal();"><a data-num="6"><span>食事管理</span></a></li>
+				<li ng-click="menu_click($event);footer('base_management');weight();"><a data-num="6"><span>体重管理</span></a></li>
+			</ul>
+		</li>
+		<li ng-click="menu_click($event);profile_main();" class="side_icon_6"><a><span class="no_click">プロフィール設定</span></a></li>
+		<li ng-click="menu_click($event);plan();" ng-if="partner_free_flag==0"><a><span class="no_click">プラン</span></a></li>
+		<!-- <li ng-click="menu_click($event);card_entry();" class="side_icon_7" ng-if="partner_free_flag==0"><a><span class="no_click">クレジットカード登録</span></a></li> -->
+		<li ng-click="account_check();" class="side_icon_8"><a><span class="no_click">アカウント切り替え</span></a></li>
+		<li ng-click="menu_click($event);noticelist();" class="side_icon_9"><a><span class="no_click">運営者からのお知らせ</span></a></li>
+		<li ng-click="menu_click($event);tutorial();" class="side_icon_10"><a><span class="no_click">チュートリアル</span></a></li>
+		<li ng-click="logout_dlg()" class="side_icon_11"><a><span class="no_click">ログアウト</span></a></li>
+	</ul>
+	<ul>
+		<li ng-click="login_navigator.pushPage('TL/terms_of_service/terms_of_service.html', { animation : 'slide' });"><a>利用規約</a></li>
+		<li ng-click="login_navigator.pushPage('TL/terms_of_service/personal_information.html', { animation : 'slide' });"><a>個人情報保護に関する<br>基本方針</a></li>
+		<li ng-click="login_navigator.pushPage('TL/terms_of_service/specified_commercial_transaction_law.html', { animation : 'slide' });"><a>特定商取引法に基づく表示</a></li>
+		<!--<li ng-click="delete_check()"><a>アカウント消去</a></li>-->
+	</ul>
+</nav>
