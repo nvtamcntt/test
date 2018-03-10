@@ -1,0 +1,323 @@
+/*** width ***/
+.w4 {
+    width: 4%;
+}
+.w5 {
+    width: 5%;
+}
+.w10 {
+    width: 10%;
+}
+.w14 {
+    width: 14%;
+}
+.w15 {
+    width: 15%;
+}
+.w20 {
+    width: 20%;
+}
+.w21 {
+    width: 21%;
+}
+.w22 {
+    width: 22%;
+}
+.w23 {
+    width: 23%;
+}
+.w25 {
+    width: 25%;
+}
+.w28 {
+    width: 28%;
+}
+.w30 {
+    width: 30%;
+}
+.w31 {
+    width: 31%;
+}
+.w33 {
+    width: 33%;
+}
+.w34 {
+    width: 34%;
+}
+.w37 {
+    width: 37%;
+}
+.w40 {
+    width: 40%;
+}
+.w45 {
+    width: 45%;
+}
+.w48 {
+    width: 48%;
+}
+.w49 {
+    width: 49%;
+}
+.w50 {
+    width: 50%;
+}
+.w53 {
+    width: 53%;
+}
+.w55 {
+    width: 55%;
+}
+.w59 {
+    width: 59%;
+}
+.w60 {
+    width: 60%;
+}
+.w65 {
+    width: 65%;
+}
+.w69 {
+    width: 69%;
+}
+.w70 {
+    width: 70%;
+}
+.w73 {
+    width: 73%;
+}
+.w76 {
+    width: 76%;
+}
+.w78 {
+    width: 78%;
+}
+.w80 {
+    width: 80%;
+}
+.w84 {
+    width: 84%;
+}
+.w85 {
+    width: 85%;
+}
+.w90 {
+    width: 90%;
+}
+.w98 {
+    width: 98%;
+}
+.w99 {
+    width: 99%;
+}
+.w100 {
+    width: 100%;
+}
+.w110 {
+    width: 110%;
+}
+
+
+.w2r {
+    width: 2rem;
+}
+.w3r {
+    width: 3rem;
+}
+.w4r {
+    width: 4rem;
+}
+.w45r {
+    width: 45rem;
+}
+
+
+.w30p {
+    width: 30px;
+}
+.w40p {
+    width: 40px;
+}
+.w50p {
+    width: 50px;
+}
+.w240p {
+    width: 240px;
+}
+
+/*** heigt ***/
+.h0r {
+    height: 0rem;
+}
+.h1r {
+    height: 1rem;
+}
+.h14r {
+    height: 1.4rem;
+}
+.h2r {
+    height: 2rem;
+}
+.h3r {
+    height: 3rem;
+}
+.h37r {
+    height: 3.7rem;
+}
+.h4r {
+    height: 4rem;
+}
+.h6r {
+    height: 6rem;
+}
+.h9r {
+    height: 9rem;
+}
+.h12r {
+    height: 12rem;
+}
+.h15r {
+    height: 15rem;
+}
+.h24r {
+    height: 24rem;
+}
+.h32r {
+    height: 32rem;
+}
+.h40r {
+    height: 40rem;
+}
+.h55r {
+    height: 55rem;
+}
+
+.h90 {
+    height: 90%;
+}
+
+.h50 {
+    height: 50%;
+}
+.h60 {
+    height: 60%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.h40 {
+    height: 40%;
+}
+
+.h30 {
+    height: 30%;
+}
+
+.h25 {
+    height: 25%;
+}
+
+.h20 {
+    height: 20%;
+}
+
+.h10 {
+    height: 10%;
+}
+
+.h40p {
+    height: 40px;
+}
+
+.h50p {
+    height: 50px;
+}
+.h100p {
+    height: 100px;
+}
+.h240p {
+    height: 240px;
+}
+.hauto {
+    height: auto;
+}
+
+/*** square ***/
+
+.square02{
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.square04{
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.square08{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.square12{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.square16{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.square20{
+    width: 2rem;
+    height: 2rem;
+}
+.square24{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.square28{
+    width: 2.8rem;
+    height: 2.8rem;
+}
+.square30{
+    width: 3rem;
+    height: 3rem;
+}
+.square32{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.square35{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.square36{
+    width: 3.6rem;
+    height: 3.6rem;
+}
+.square40{
+    width: 4rem;
+    height: 4rem;
+}
+.square44{
+    width: 4.4rem;
+    height: 4.4rem;
+}
+.square48{
+    width: 4.8rem;
+    height: 4.8rem;
+}
+.square50{
+    width: 5rem;
+    height: 5rem;
+}
+
+.square60{
+    width: 6rem;
+    height: 6rem;
+}
+
+.square80{
+    width: 8rem;
+    height: 8rem;
+}

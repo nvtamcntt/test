@@ -1,0 +1,62 @@
+
+.fonts {font-size: 1rem;}
+.fontm {font-size: 1.4rem;}
+.fontl {font-size: 2rem;}
+.font08 {font-size:0.8rem;}
+.font10 {font-size:1rem;}
+.font11 {font-size:1.1rem;}
+.font12 {font-size:1.2rem;}
+.font14 {font-size:1.4rem;}
+.font15 {font-size:1.5rem;}
+.font16 {font-size:1.6rem;}
+.font18 {font-size:1.8rem;}
+.font20 {font-size:2rem;}
+.font22 {font-size:2.2rem;}
+.font24 {font-size:2.4rem;}
+.font26 {font-size:2.6rem;}
+.font28 {font-size:2.8rem;}
+.font32 {font-size:3.2rem;}
+.font34 {font-size:3.4rem;}
+.font36 {font-size:3.6rem;}
+.font38 {font-size:3.8rem;}
+.font40 {font-size:4rem;}
+.font44 {font-size:4.4rem;}
+.font48 {font-size:4.8rem;}
+.font50 {font-size:5.0rem;}
+.font52 {font-size:5.2rem;}
+.font56 {font-size:5.6rem;}
+.font60 {font-size:6rem;}
+.font64 {font-size:6.4rem;}
+.font68 {font-size:6.8rem;}
+.font72 {font-size:7.2rem;}
+.font76 {font-size:7.6rem;}
+.font80 {font-size:8rem;}
+.font84 {font-size:8.4rem;}
+.font88 {font-size:8.8rem;}
+.font90 {font-size:9.0rem;}
+.font92 {font-size:9.2rem;}
+.font96 {font-size:9.6rem;}
+.font100 {font-size:10rem;}
+.font116 {font-size:11.6rem;}
+
+
+.text_over {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.lh16 {
+    line-height: 1.6rem;
+}
+
+.lh20 {
+    line-height: 2rem;
+}
+.text_center {
+	text-align: center;
+}

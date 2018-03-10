@@ -1,0 +1,36 @@
+
+ons-toolbar + .page__background + .page__content {
+
+    top: 64px!important;
+}
+ons-toolbar.navigation-bar{
+	/*padding-top: 20px!important;*/
+	margin-top: 20px;
+	height: 44px;
+	/*margin: 0px 0px 0px 0px!important;
+	padding: 0px 0px 0px 0px!important;*/
+}
+
+ons-dialog ons-toolbar.navigation-bar{
+	margin-top: 0px;
+}
+
+.dialog > div {
+    padding-top: 20px;
+    height: calc(100% - 20px);
+}
+
+.trtl_main .trtl_check .ons-list-inner {
+    margin-top: 0px;
+}
+
+.trtl_main .ons-list-inner {
+    margin-top: 40px;
+}
+
+.page__status-bar-fill + ons-toolbar > .center,
+.page__status-bar-fill + ons-toolbar > .left,
+.page__status-bar-fill + ons-toolbar > .right {
+	padding-top: 0px!important;
+}
+

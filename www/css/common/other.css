@@ -1,0 +1,141 @@
+
+.opa03 {
+    opacity: 0.3;
+}
+
+.opa05 {
+    opacity: 0.5;
+}
+
+.opa07 {
+    opacity: 0.7;
+}
+
+.opa08 {
+    opacity: 0.8;
+}
+
+.opa09 {
+    opacity: 0.9;
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z3 {
+    z-index: 3;
+}
+
+.z-1 {
+    z-index: -1;
+}
+
+.kadomaru_s {
+    border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+}
+.kadomaru {
+    border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+}
+
+.kadomaru_t {
+    border-radius: 4px 4px 0 0 / 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0 / 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0 / 4px 4px 0 0;
+}
+
+.kadomaru_l {
+    border-radius: 4px 0px 0px 4px / 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px / 4px 0px 0px 4px;
+    -moz-border-radius: 4px 0px 0px 4px / 4px 0px 0px 4px;
+}
+
+.kadomaru_r {
+    border-radius: 0px 4px 4px 0px / 0px 4px 4px 0px;
+    -webkit-border-radius: 0px 4px 4px 0px / 0px 4px 4px 0px;
+    -moz-border-radius: 0px 4px 4px 0px / 0px 4px 4px 0px;
+}
+
+.kadomaru_b {
+    border-radius: 0 0 4px 4px / 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px / 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px / 0 0 4px 4px;
+}
+
+.maru {
+    border-radius: 50%;
+    text-align: center;
+}
+
+.maru.active {
+    background: #00A0EA;
+}
+
+.no_radius {
+    border-radius: 0;
+}
+
+.radius1 {
+    border-radius: 1rem;
+}
+
+.radius2 {
+    border-radius: 2rem;
+}
+
+.break_word{
+    word-wrap: break-word;
+}
+
+.no_click {
+    pointer-events: none;
+}
+
+.pre_line{
+    white-space: pre-line;
+}
+
+.img_center_trimming_div{
+    overflow: hidden;
+    position: relative;
+}
+
+
+.img_center_trimming{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+
+.terms {
+    height:60%;
+    overflow: scroll;
+    padding: 2%;
+    margin-bottom: 10px;
+    border: 1px solid #333333;
+    margin: 2%;
+    font-size: 14px;
+}
+
+.terms_full_height {
+    overflow: scroll;
+    padding: 2%;
+    margin-bottom: 10px;
+    border: 1px solid #333333;
+    margin: 2%;
+    font-size: 14px;
+}

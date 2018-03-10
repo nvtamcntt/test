@@ -1,0 +1,189 @@
+
+.flex {
+    display:flex;
+    justify-content:center;
+}
+
+.flex_left{
+        margin-right:auto;
+}
+
+.flex_right{
+        margin-left:auto;
+}
+
+.flex_start {
+    justify-content: flex-start;
+}
+
+.flex_end {
+    justify-content: flex-end;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flex_center{
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-flex-item-align: center;
+    text-align: inherit;
+}
+
+.flex_bottom {
+    -webkit-align-self: flex-end;
+    -moz-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+.flex_center_align-items{
+    -webkit-align-items: center; /* Safari */
+    align-items:center;
+}
+
+.flex_flex-end_align-items{
+    -webkit-align-items: flex-end; /* Safari */
+    align-items:flex-end;
+}
+
+
+.flex_direction{
+    flex-direction:column;
+    -webkit-flex-direction:column;
+}
+.flex_column_end{
+  /*   flex-direction : column;
+    justify-content: center;
+    align-items : flex-end; */
+     -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+
+      -webkit-justify-content: flex-end; /* Safari */
+  justify-content:         flex-end;
+}
+
+.flex_justify-content_flex-start{
+    justify-content:flex-start;
+    -webkit-flex-content:flex-start;
+}
+
+.flex-container {
+  -webkit-justify-content: center; /* Safari */
+  justify-content:         center;
+}
+
+.flex_space_between{
+    -webkit-justify-content: space-between;
+    justify-content:space-between;
+}
+
+.flex_space_around{
+    -webkit-justify-content: space-around;
+    justify-content:space-around;
+}
+
+
+.flex_wrap{
+    -webkit-flex-wrap: wrap;
+    flex-wrap:wrap;
+}
+
+.flex_grow1{
+    flex-grow:1;
+}
+
+.float:after{
+	content:"";
+	clear: both;
+	display: block;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.p_left0 {
+    left: 0;
+}
+
+.p_left50 {
+    left: 50%;
+}
+
+.p_right0 {
+    right: 0;
+}
+
+.p_right12p{
+    right: 12px;
+}
+
+.p_top0 {
+    top: 0;
+}
+.p_top12 {
+    top: 12;
+}
+
+.p_top25 {
+    top: 25%;
+}
+
+.p_top50 {
+    top: 50%;
+}
+
+.p_top12p{
+    top: 12px;
+}
+
+.p_bottom0 {
+    bottom: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.zindex{
+    z-index: 1;
+}
+
+.align_r{
+    text-align: right;
+}
+
+.align_l{
+    text-align: left;
+}
+
+.align_c{
+    text-align: center;
+}
+
+.mh120 {
+    min-height: 120px;
+}
+
+.line1{
+    line-height: 1;
+}
+
+.pro_image{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.child {
+  width: 33.3333333%;
+}
