@@ -1,0 +1,54 @@
+
+<ons-page ng-controller="MemberRegistrationController" class="member_registration">
+<!--     <ons-modal var="modal">
+      <ons-icon icon="ion-load-c" spin="true"></ons-icon>
+      <br> Please wait.
+    </ons-modal> -->
+    <ons-toolbar id="globalHeader" class="bc271">
+        <div class="left">
+            <div class="btn" ng-click="popPage()"><img src="images/prev.png" alt="" class="back" ></div>
+        </div>
+  <!--       <div class="center w100 flex flex_center_align-items">
+            <img src="images/common/header_logo.png" alt="" height="35" width="156">
+        </div> -->
+        <div class="right">
+        </div>
+    </ons-toolbar>
+
+    <!-- <form id="me_form" method="post"  enctype="multipart/form-data" class="box"> -->
+        <h3 class="login_h3 h3_1 align_c c27 mt16 font20">Đăng kí tài khoản</h3>
+
+        <h3 class="c27 mt12 font14"><span>Họ và tên</span></h3>
+        <div class ="input"><input class="w100" type="text" maxlength="100" id="me_name" name="me_name"></div>
+        <div class="error">{{required_name_error}}</div>
+
+
+        <h3 class="c27 mt12 font14"><span>Email</span></h3>
+        <div class ="input"><input class="w100"  type="email" id="me_mail" maxlength="250" name="me_mail"></div>
+        <div class="error">{{correct_mail_error}}</div>
+        <div class="error">{{alphanumeric_mail_error}}</div>
+
+
+        <h3 class="c27 mt12 font14"><span>Mật khẩu</span></h3>
+        <div class ="input"><input class="w100"  type="password" id="me_pass" name="me_pass" maxlength="20"></div>
+        <h3 class="c27 mt12 font14"><span>Nhắc lại mật khẩu</span></h3>
+        <div class ="input"><input class="w100"  type="password" id="me_pass" name="me_pass" maxlength="20"></div>
+        <div class="error">{{required_pass_error}}</div>
+        <div class="error">{{alphanumeric_pass_error}}</div>
+        <div class="error">{{length_pass_error}}</div>
+
+        <h3 class="c27 mt12 font14"><span>Giới tính</span></h3>
+        <div class ="input select_box w60">
+            <select name="sex"  style="width: 50%" ng-model="trainer_flag_sel" mobiscroll-select="sex_sel_set" mobiscroll-instance="sex_sel_in" name="trainer_flag" id="trainer_flag">
+                <option value="0"  class="w100">Nam</option>
+                <option value="1"  class="w100">Nữ</option>
+            </select>
+        </div>
+         <div class="error">{{message}}</div>
+        <div class="registration_button_div w50 c27"><ons-button class="registration_button flex_center_align-items align_c mt12 w50" ng-click="member_registration_ck()">Đăng kí</ons-button></div>
+
+    <!-- </form> -->
+
+
+
+      </ons-page>

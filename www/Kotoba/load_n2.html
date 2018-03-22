@@ -1,0 +1,57 @@
+<ons-page id="userHome" ng-controller="LoadN2Controller">
+	<ons-toolbar id="globalHeader">
+		<div class="left">
+			<div class="btn" ng-click="menuOpen();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
+		</div>
+		<div class="center h100 flex flex_center_align-items">
+			<span class="text_center font20 c_white">Mimikara Oboeru</span>
+		</div>
+<!-- 		<div class="right square40 mr04">
+			<div class="btn mt04 relative" ng-click="main_navigator.pushPage('Profile/profile_main.html', {animation: 'slide'})">
+				<div class="absolute"><img ng-src="{{profile_url}}"  class="pro_image square40 maru "></div>
+			</div>
+		</div> -->
+	</ons-toolbar>
+	<!-- tab content -->
+	<div id="contents" class="home">
+		<div class="flex b_drak">
+			<div class="align_c w50  c_black mtb12 border_r c_border_umain" ng-click="main_navigator.resetToPage('Kotoba/load_n3.html',{ animation : 'none' });" >
+					N3
+			</div>
+			<div class="align_c w50 c27 mtb12" ng-click="main_navigator.resetToPage('Kotoba/load_n2.html',{ animation : 'none' });">
+					N2
+			</div>
+		</div>
+
+ 	<div class="tab-contents">
+ 		<div id="home">
+			<ons-list class="">
+				<ons-list-item class="card" ng-repeat="lession in lession_list | orderBy:column | filter:filter:false" ng-click="open_lession_list(lession)">
+					<div class="box b_drak ">
+						<div class="flex mb04 h65r">
+							<div class="flex_center pro_image_dev ml20">
+								<img ng-src="images/lesson/lesson.png" ng-click="img_view(lession.url_image,$event)" class="maru square50 pro_image border05">
+							</div>
+							<div class="ml12 flex_center">
+
+								<div class="font14">
+									{{lession.name}}
+								</div>
+
+							</div>
+							<div class="flex_right align_r">
+								<ons-icon
+									  icon="ion-paperclip"
+									  size="30px"
+									  fixed-width="false"
+									  style="color: black">
+								</ons-icon>
+							</div>
+						</div>
+					</div>
+
+				</ons-list-item>
+			</ons-list>
+ 		</div>
+	</div> 
+</ons-page>

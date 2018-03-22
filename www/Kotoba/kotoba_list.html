@@ -1,0 +1,61 @@
+<ons-page class="trainer_list" ng-controller="KotobaListController">
+	<ons-toolbar >
+		<div class="left">
+			<div class="btn" ng-click="back();"><img src="images/prev.png" alt="" style="margin-left: -1rem;" class="bargar"></div>
+		</div>
+		<div class="center">
+				<input type="text" class="text-input text-input--transparent font20 c_white" 
+				style="width:90%;
+			    height: 44px;
+			    margin-left: 4rem;
+			    /*background-color: red;*/
+			    " 
+			    placeholder="Tìm kiếm từ"></input>
+		</div>
+		<div class="right">
+			<div class="btn" ng-click="search();"><img src="images/search.png" alt="" class="bargar"></div>
+		</div>
+	</ons-toolbar>
+
+	<div class="mt02">
+		<ons-list class="b_gray1">
+			<ons-list-item class="card m0" ng-repeat="kotoba in kotoba_list | orderBy:column | filter:filter:false" ng-click="load_kotoba_detail(kotoba, $index);">
+				<div class="box card1 normal mb-01">
+					<div class="flex mb04">
+						<div class="flex_right align_r font18 maru square24 c_border_black border bold">
+							{{kotoba.number}}
+						</div> 
+						<div class="ml02 flex_bottom w90 ">
+							<div class="bold font26 mb04 text_over align_c">
+								<span class="c23">{{kotoba.kanji}}</span>
+							</div>
+							<div class="flex">
+								<div class="bold font16 w50 align_l">
+									<span class="c24">{{kotoba.hiragana}}</span>
+								</div>
+								<div class="bold font16 w50 align_r mt04">
+									<span class="c25">{{kotoba.nghia}}</span>
+								</div>
+							</div>
+							<div class="bold font14 mt04">
+								<ons-icon
+									  icon="ion-android-star-outline"
+									  size="20px"
+									  fixed-width="false"
+									  style="color: black">
+								</ons-icon>
+								<span class="c_black">{{kotoba.example1}}。</span>
+							</div>
+						</div>
+						<div class="flex_right align_r">
+							<!-- <ons-button class="maru p04 c_white square28 b_tmain c_white" ng-class="{shadow:!sinsei_flag}"><icon class="font20 icon-icon-16"></icon></ons-button> -->
+							<icon class="font20 icon-icon-20"></icon>
+						</div>
+
+					</div>
+				</div>
+				
+			</ons-list-item>
+		</ons-list>
+	</div>
+</ons-page>

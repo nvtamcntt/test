@@ -2,7 +2,78 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 
 	var ParamList_R = [];
 	var ParamList_W = [];
+	$scope.login = false;
 	ParamList_R = SharedScopes.get();
 	SharedScopes.delete();
+	console.log(ParamList_R['username']);
+	if (ParamList_R['username'] != undefined){
+		$scope.username = ParamList_R['username'];
+		$scope.login = true;
+	}
+	else {
+		$scope.username = "Bạn tôi";
+		$scope.login = false;
+	} 
+	console.log($scope.username);
+	$scope.menu_click = function($event){
+		tl.menu.closeMenu();
+		var num = $($event.target).attr('data-num');
+		// console.log("num ",  num);
+		if(num<7){
+			$('#globalNavi li').removeClass('current');
+			switch(Number(num)){
+				case 1:
+					num = 1;
+				break;
+				case 2:
+					num = 2;
+				break;
+				case 3:
+					num = 3;
+				break;
+				case 4:
+					num = 4;
+				break;
+				case 5:
+					num = 5;
+				break;
+				case 6:
+					num = 6;
+				break;
+				case 0:
+					num = 0;
+				break;
+			}
+			$('#globalNavi li:nth-of-type(' + num + ')').addClass('current');
+		}
+	}
 	
+	$scope.registration = function (){
+		ParamList_W['is_click'] = true;
+		SharedScopes.set(ParamList_W);
+		$scope.main_navigator.resetToPage("Login/login.html", { animation : 'slide' ,onTransitionEnd : function() {
+		}});
+		// $scope.main_navigator.pushPage("Login/register.html", { animation : 'slide' ,onTransitionEnd : function() {
+		// }});
+	}
+
+	$scope.tuvung = function(){
+		// ParamList_W['is_exit'] = true;
+		// SharedScopes.set(ParamList_W);
+		main_navigator.resetToPage('UserHome/user_home.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
+
+
+	$scope.logout = function(){
+		localStorage.setItem('session_id',"");
+		localStorage.setItem('id',"" );
+		localStorage.setItem('pass',"" );
+		login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
+
+
 }]);

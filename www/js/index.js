@@ -7,7 +7,7 @@
 
 	//var host = "https://www.sportrai.net";
 
-	var host = "http://ec2-54-64-253-194.ap-northeast-1.compute.amazonaws.com";
+	var host = "http://localhost";
 	var module = ons.bootstrap('app', ['onsen','mobiscroll-select','mobiscroll-number','mobiscroll-datetime','mobiscroll-widget','mobiscroll-numpad']);
 
 	//var module = ons.bootstrap();

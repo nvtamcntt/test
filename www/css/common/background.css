@@ -1,6 +1,6 @@
 
 .b_main{
-    background-background: #e5e5e5;
+    background: #e5e5e5;
 }
 
 .b_umain{
@@ -28,7 +28,9 @@
 .b_sky {
     background: #B3E1FB;
 }
-
+.b_blue1 {
+    background: #3777d4;
+}
 .b_kon {
     background: #1D2089;
 }
@@ -75,7 +77,12 @@
 .b_black {
     background: #000000;
 }
-
+.b_drak {
+    background: #eeeeee;
+}
+.b_drak2 {
+    background: #e5e5e5;
+}
 .b_none {
     background: none;
 }
@@ -143,4 +150,11 @@
 }
 .b21{
     background: #9FA0A0;
+}
+
+.bc_gray1{
+    background-color: #4d81ed;
+}
+.bc_white{
+    background-color: #fff;
 }

@@ -104,6 +104,9 @@
 .w90 {
     width: 90%;
 }
+.w95 {
+    width: 95%;
+}
 .w98 {
     width: 98%;
 }
@@ -169,6 +172,9 @@
 }
 .h6r {
     height: 6rem;
+}
+.h65r {
+    height: 6.5rem;
 }
 .h9r {
     height: 9rem;
@@ -271,6 +277,10 @@
     width: 2rem;
     height: 2rem;
 }
+.square22{
+    width: 2rem;
+    height: 2rem;
+}
 .square24{
     width: 2.4rem;
     height: 2.4rem;
@@ -298,6 +308,10 @@
 .square40{
     width: 4rem;
     height: 4rem;
+}
+.square42{
+    width: 4.2rem;
+    height: 4.2rem;
 }
 .square44{
     width: 4.4rem;

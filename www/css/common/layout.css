@@ -3,7 +3,9 @@
     display:flex;
     justify-content:center;
 }
-
+.display {
+    display:flex;
+}
 .flex_left{
         margin-right:auto;
 }

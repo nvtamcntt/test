@@ -1,0 +1,20 @@
+<ons-page ng-controller="LoginController">
+    <ons-toolbar id="globalHeader">
+       <div class="left">
+            <div class="btn" ng-click="popPage()"><img src="images/prev.png" alt="" class="back" ></div>
+        </div>
+    </ons-toolbar>
+    <h3 class="login_h3 h3_1 align_c c27 mt28">Đăng nhập</h3>
+    <div class="box">
+        <h3 class="h3_1 c27 mb08 mt08">Địa chỉ email</h3>
+        <input type="text" id="id" style="ime-mode:disabled;" autofocus class="w100">
+        <h3 class="h3_1 c27 mb08 mt08">Mật khẩu</h3>
+        <input type="password" id="pass" class="w100">
+        <div class="align_c mt16 mb16">
+            <ons-button class="c27 no_radius pt04 pb04 pl08 pr08 w50" ng-click="loginck()"><span class="c_white">Đăng nhập</span></ons-button>
+        </div>
+         <div class="align_c">{{id_error}}</div>
+        <!-- <p class="align_c c27">Quên mật khẩu</p> -->
+        <p class="align_c c27" ng-click="registration()">Đăng kí</p>
+    </div>
+</ons-page>

@@ -19,31 +19,27 @@ ol, ul {
   left: 0;
   width: 200px;
   height: 100%;
-  padding-top: 30px;
-  background-color: #000000;
+  background-color: #ffffff;
   z-index: 3;
   box-shadow: 1px 0 20px 1px #333;
 }
-#globalNavi .logo {
-  text-align: center;
-}
-#globalNavi .logo img {
+/*#globalNavi .logo img {
   width: 70px;
-}
+}*/
 #globalNavi > ul:nth-of-type(1) {
-  background-color: #1A1A1A;
+  background-color: #fff;
 }
 #globalNavi > ul:nth-of-type(1) > li {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #eeeeee;
   background-repeat: no-repeat;
   background-position: 5px 10px;
   background-size: 35px auto;
 }
 #globalNavi > ul:nth-of-type(1) > li.current {
-  background: #00a0e9;
+  background: #eeeeee;
 }
 #trainer #globalNavi > ul:nth-of-type(1) > li.current {
-  background: #E5004F;
+  background: #eeeeee;
 }
 #globalNavi > ul:nth-of-type(1) > li.acordion > a {
   background: url("../images/icon/arrow_btm_gley.png") no-repeat 95% center;
@@ -55,9 +51,9 @@ ol, ul {
 }
 #globalNavi > ul:nth-of-type(1) > li a {
   display: block;
-  padding: 15px 20px 15px 40px;
+  padding: 7px 20px 8px 40px;
   font-size: 14px;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   position: relative;
 }
@@ -65,83 +61,36 @@ ol, ul {
 #globalNavi > ul:nth-of-type(1) > li a:before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 8px;
     left: 5px;
     width: 35px;
     height: 26px;
-    background-size: 35px auto;
+    background-size: 21px auto;
 }
 #globalNavi > ul:nth-of-type(1) > li:nth-of-type(1) a:before {
+    width: 2.0rem;height: 2.0rem;
     background-image: url(../images/icon/side01.png);
 }
 #globalNavi > ul:nth-of-type(1) > li:nth-of-type(2) a:before {
-    background-image: url(../images/icon/side02.png);
+    width: 2.0rem;height: 2.0rem;
+    background-image: url(../images/icon/side01.png);
 }
 #globalNavi > ul:nth-of-type(1) > li:nth-of-type(3) a:before {
-    background-image: url(../images/icon/side03.png);
+  width: 2.0rem;height: 2.0rem;
+    background-image: url(../images/icon/side01.png);
 }
 #globalNavi > ul:nth-of-type(1) > li:nth-of-type(4) a:before {
-    background-image: url(../images/icon/side04.png);
+  width: 2.0rem;height: 2.0rem;
+    background-image: url(../images/icon/side01.png);
 }
-#globalNavi > ul:nth-of-type(1) > .side_icon_5 a:before {
-    background-image: url(../images/icon/side05.png);
+#globalNavi > ul:nth-of-type(1) > li:nth-of-type(5) a:before {
+  width: 2.0rem;height: 2.0rem;
+    background-image: url(../images/icon/side01.png);
 }
-#globalNavi > ul:nth-of-type(1) > .side_icon_6 a:before {
-    background-image: url(../images/thum/aa.png);
+#globalNavi > ul:nth-of-type(1) > li:nth-of-type(6) a:before {
+  width: 2.0rem;height: 2.0rem;
+    background-image: url(../images/icon/side01.png);
 }
-#globalNavi > ul:nth-of-type(1) > .side_icon_7 a:before {
-    background-image: url(../images/icon/card_icon.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_8 a:before {
-    background-image: url(../images/icon/side06.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_9 a:before {
-    background-image: url(../images/icon/side07.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_10 a:before {
-    background-image: url(../images/icon/tuto.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_11 a:before {
-    background-image: url(../images/icon/side08.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_12 a:before {
-    background-image: url(../images/icon/tab07_current.png);
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_12 ul a:before {
-    content: none;
-}
-#globalNavi > ul:nth-of-type(1) > .side_icon_12 ul a {
-    padding-left: 12px;
-}
-
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_3 a:before {
-    background-image: url(../images/icon/side04.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_4 a:before {
-    background-image: url(../images/icon/side05.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_5 a:before {
-    background-image: url(../images/icon/tab07_current.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_6 a:before {
-    background-image: url(../images/thum/aa.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_7 a:before {
-    background-image: url(../images/icon/card_icon.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_8 a:before {
-    background-image: url(../images/icon/bank.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_9 a:before {
-    background-image: url(../images/icon/side06.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_10 a:before {
-    background-image: url(../images/icon/side07.png);
-}
-#trainer #globalNavi > ul:nth-of-type(1) > .side_icon_11 a:before {
-    background-image: url(../images/icon/side08.png);
-}
-
 .ion-ios-arrow-back:before {
     background: url(../images/tl/back.png);
     content: '';
@@ -152,7 +101,16 @@ ol, ul {
     margin-top: 5px;
     background-size: 26px 26px;
 }
-
+#search_button:before {
+    background: url(../images/tl/search.png);
+    content: '';
+    display: inline-block;
+    width: 26px;
+    vertical-align: middle;
+    height: 26px;
+    margin-top: 5px;
+    background-size: 26px 26px;
+}
 
 #globalNavi > ul:nth-of-type(1) > li ul {
   display: none;
@@ -207,7 +165,7 @@ ol, ul {
   left: 0;
   width: 100%;
   padding: 10px 15px 0;
-  background-color: #00A0E9;
+  background-color: #4d81ed;
 }
 #trainer #globalHeader {
   background-color: #E5004F;
@@ -1081,7 +1039,7 @@ ons-list .list-item__center {
     z-index: 1;
     width: 100%;
     position: absolute;
-    color: #1e9ad5;
+    color: #4d81ed;
     font-family:"icomoon";
     font-weight: 500;
     height: auto;
@@ -1119,7 +1077,7 @@ ons-icon.ng-scope.ons-icon.ons-icon--ion.ion-navicon.fa-lg {
 }
 
 ons-toolbar.navigation-bar,body .user_tl ons-toolbar.navigation-bar {
-    background: #00A0EA;
+    background: #4d81ed;
     border: 0;
 }
 
@@ -1143,7 +1101,7 @@ ons-toolbar .tab-bar__button,.toolbar-button, .toolbar-button--outline, .toolbar
     color: #fff;
 }
 
-.ion-ios-arrow-back.ons-back-button__icon {
+#search_button {
     color: #fff;
 }
 

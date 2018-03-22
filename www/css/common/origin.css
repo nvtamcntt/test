@@ -5,7 +5,20 @@
     display: block;
     border-radius: 4px;
 }
-
+.card1 {
+    margin: 0rem;
+    background: #fff;
+    display: block;
+    border-radius: 11px;
+    border-color: black;
+    border: 0.5px solid;
+}
+.card2 {
+    margin: 1rem;
+    background: #fff;
+    display: block;
+    border-radius: 11px;
+}
 .box {
     padding: 1rem;
 }

@@ -4,321 +4,54 @@
 			<div class="btn" ng-click="menuOpen();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
 		</div>
 		<div class="center h100 flex flex_center_align-items">
-			<img src="images/common/header_logo.png" alt="" height="35" width="156">
+			<span class="text_center font20 c_white">Mimikara Oboeru</span>
 		</div>
-		<!--<div class="center">
-			タイムライン
-		</div>-->
-		<div class="right square40 mr04">
+<!-- 		<div class="right square40 mr04">
 			<div class="btn mt04 relative" ng-click="main_navigator.pushPage('Profile/profile_main.html', {animation: 'slide'})">
-				<!--<div class="square40 maru" style="    z-index: 1;
-				    position: absolute;
-				    /* float: left; */
-				    background-color: #fff;
-				    opacity: 0.5;"></div>-->
 				<div class="absolute"><img ng-src="{{profile_url}}"  class="pro_image square40 maru "></div>
 			</div>
-		</div>
+		</div> -->
 	</ons-toolbar>
+	<!-- tab content -->
 	<div id="contents" class="home">
-<!-- 	<div class="navigation-bar" style="position: fixed; top: 4%; height: 2%"> -->
-		<div class="flex b_black">
-			<div class="align_c w50 c_umain mtb12 border_r c_border_umain" ng-click="main_navigator.resetToPage('UserHome/user_home.html',{ animation : 'none' });" >
-					ホーム
+		<div class="flex b_drak">
+			<div class="align_c w50 c27 mtb12 border_r c_border_umain" ng-click="main_navigator.resetToPage('Kotoba/load_n3.html',{ animation : 'none' });" >
+					N3
 			</div>
-			<div class="align_c w50 c_gray mtb12" ng-click="main_navigator.resetToPage('UserHome/user_train.html',{ animation : 'none' });">
-					トレーニング／管理
+			<div class="align_c w50 c_black mtb12" ng-click="main_navigator.resetToPage('Kotoba/load_n2.html',{ animation : 'none' });">
+					N2
 			</div>
 		</div>
-<!-- 	</div>
-	<div id="scrollToppage"></div>
-	<div class="mt37" ></div> -->
-	<div class="tab-contents">
-		<div id="home">
-			<div style="background: url(images/shutterstock_420604069.jpg); background-size: cover; background-position:center" class="">
-				<div style="background-color: rgba(0,0,0,0.8);">
-					<div class="flex flex_space_between" ng-if="!weight_graph">
-						<div><ons-button ng-click="GraphcarouselPrev()" class="b_none absolute p_left0"  style="z-index: 1;"><i class="fa fa-angle-left font28 p16" aria-hidden="true"></i></ons-button></div>
-						<div><ons-button ng-click="GraphcarouselNext()" class="b_none absolute p_right0" style="z-index: 1;"><i class="fa fa-angle-right font28 p16" aria-hidden="true"></i></ons-button></div>
-					</div>
 
-					<div class="pt10" ng-if="!weight_graph">
-						<ons-carousel swipeable overscrollable auto-scroll style=" height: 400px;" item-width="100%" var="Graph_Carousel" class="c_white align_c">
-							<ons-carousel-item  style="padding: 0 7.5%;">
-								<div class="w85">
-									<div>体重遷移</div>
-									<div class="flex flex_center_align-items">
-										<div class="w40 align_r" ng-if="weight!=0"><span class="font24">{{weight | number:2}}</span><span class="font14">kg</span></div>
-										<div class="w40 align_r font20" ng-if="weight==0">未入力</div>
-										<div class="align_l w60">
-											<div class="font12 flex flex_center_align-items" ng-if="initial_weight!=0">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': initial_weight_top >= 0, 'icon-icon-23': initial_weight_top < 0,'c_red' : initial_weight_top >= 0, 'c_blue' : initial_weight_top < 0}"></div>
-												<div class="font10 w40">初期値から</div>
-												<div class="font12 w40" ng-class="{'c_red' : initial_weight_top >=0, 'c_blue' : initial_weight_top < 0}" ng-if="initial_bmi_top >=0">
-													+{{initial_weight_top | number:2}}kg</div>
-												<div class="font12 w40" ng-class="{'c_red' : initial_weight_top >=0, 'c_blue' : initial_weight_top < 0}" ng-if="initial_bmi_top <0">
-												{{initial_weight_top | number:2}}kg</div>
-											</div>
-											<div ng-if="initial_weight==0" class="font12 flex flex_center_align-items">初期値:未設定</div>
-											<div class="font12 flex flex_center_align-items" ng-if="goal_weight!=0">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': goal_weight_top >= 0, 'icon-icon-23': goal_weight_top < 0,'c_red' : goal_weight_top >= 0, 'c_blue' : goal_weight_top < 0}"></div>
-												<div class="font10 w40">目標値まで</div>
-												<div class="font12 w40" ng-class="{'c_red' : goal_weight_top >=0, 'c_blue' : goal_weight_top < 0}">{{goal_weight_top | number:2}}kg</div>
-											</div>
-											<div ng-if="goal_weight==0" class="font12 flex flex_center_align-items">目標値:未設定</div>
-										</div>
-									</div>
-									<div class="font12">{{date | date: 'yyyy.M.d H:mm'}}</div>
-								</div>
-								<div><canvas id="canvas_weight" chart-colors="colors"></canvas></div>
-							</ons-carousel-item >
-							<ons-carousel-item style="padding: 0 7.5%;">
-								<div class="w85">
-									<div>体脂肪率遷移</div>
-									<div class="flex flex_center_align-items">
-										<div class="w40 align_r" ng-if="body_fat_percentage!=0"><span class="font24">{{body_fat_percentage | number:2}}</span></div>
-										<div class="w40 align_r font20" ng-if="body_fat_percentage==0">未入力</div>
-										<div class="align_l w60">
-											<div ng-if="initial_body_fat_percentage!=0" class="font12 flex flex_center_align-items">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': initial_bmi_top >= 0, 'icon-icon-23': initial_bmi_top < 0,'c_red' : initial_bmi_top >= 0, 'c_blue' : initial_bmi_top < 0}"></div>
-												<div class="font10 w40">初期値から</div>
-												<div class="font12 w40" ng-class="{'c_red' : initial_bmi_top >=0, 'c_blue' : initial_bmi_top < 0}" ng-if="initial_bmi_top >=0">
-													+{{initial_bmi_top | number:2}}%</div>
-												<div class="font12 w40" ng-class="{'c_red' : initial_bmi_top >=0, 'c_blue' : initial_bmi_top < 0}" ng-if="initial_bmi_top <0">
-												{{initial_bmi_top | number:2}}%</div>
-											</div>
-											<div ng-if="initial_body_fat_percentage==0" class="font12 flex flex_center_align-items">初期値:未設定</div>
-											<div ng-if="goal_body_fat_percentage!=0" class="font12 flex flex_center_align-items">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': goal_body_fat_percentage_top >= 0, 'icon-icon-23': goal_body_fat_percentage_top < 0,'c_red' : goal_body_fat_percentage_top >= 0, 'c_blue' : goal_body_fat_percentage_top < 0}"></div>
-												<div class="font10 w40">目標値まで</div>
-												<div class="font12 w40" ng-class="{'c_red' : goal_body_fat_percentage_top >=0, 'c_blue' : goal_body_fat_percentage_top < 0}" ng-if="goal_body_fat_percentage_top >=0">+{{goal_body_fat_percentage_top | number:2}}%</div>
-												<div class="font12 w40" ng-class="{'c_red' : goal_body_fat_percentage_top >=0, 'c_blue' : goal_body_fat_percentage_top < 0}" ng-if="goal_body_fat_percentage_top <0">{{goal_body_fat_percentage_top | number:2}}%</div>
-											</div>
-											<div ng-if="goal_body_fat_percentage==0" class="font12 flex flex_center_align-items">目標値:未設定</div>
-										</div>
-									</div>
-									<div class="font12">{{date | date: 'yyyy.M.d H:mm'}}</div>
-								</div>
-								<div><canvas id="canvas_body_fat_percentage" chart-colors="colors"></canvas></div>
-							</ons-carousel-item >
-							<ons-carousel-item style="padding: 0 7.5%;">
-								<div class="w85">
-									<div>BMI遷移</div>
-									<div class="flex flex_center_align-items">
-										<div class="w40 align_r" ng-if="bmi!=0"><span class="font24">{{bmi | number:2}}</span></div>
-										<div class="w40 align_r font20" ng-if="bmi==0">未入力</div>
-										<div class="align_l w60">
-											<div ng-if="initial_bmi!=0" class="font12 flex flex_center_align-items">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': initial_bmi_top >= 0, 'icon-icon-23': initial_bmi_top < 0,'c_red' : initial_bmi_top >= 0, 'c_blue' : initial_bmi_top < 0}"></div>
-												<div class="font10 w40">初期値から</div>
-												<div class="font12 w40" ng-class="{'c_red' : initial_bmi_top >=0, 'c_blue' : initial_bmi_top < 0}" ng-if="initial_bmi_top >=0">
-													+{{initial_bmi_top | number:2}}</div>
-													<div class="font12 w40" ng-class="{'c_red' : initial_bmi_top >=0, 'c_blue' : initial_bmi_top < 0}" ng-if="initial_bmi_top <0">
-													{{initial_bmi_top | number:2}}</div>
-											</div>
-											<div ng-if="initial_bmi==0" class="font12 flex flex_center_align-items">初期値:未設定</div>
-											<div ng-if="goal_bmi!=0" class="font12 flex flex_center_align-items">
-												<div class="font12 w10 bold" ng-class="{'icon-icon-22': goal_bmi_top >= 0, 'icon-icon-23': goal_bmi_top < 0,'c_red' : goal_bmi_top >= 0, 'c_blue' : goal_bmi_top < 0}"></div>
-												<div class="font10 w40">目標値まで</div>
-												<div class="font12 w40" ng-class="{'c_red' : goal_bmi_top >=0, 'c_blue' : goal_bmi_top < 0}" ng-if="goal_bmi_top >=0">+{{goal_bmi_top | number:2}}</div>
-												<div class="font12 w40" ng-class="{'c_red' : goal_bmi_top >=0, 'c_blue' : goal_bmi_top < 0}" ng-if="goal_bmi_top <0">{{goal_bmi_top | number:2}}</div>
-											</div>
-											<div ng-if="goal_bmi==0" class="font12 flex flex_center_align-items">目標値:未設定</div>
-										</div>
-									</div>
-									<div class="font12">{{date | date: 'yyyy.M.d H:mm'}}</div>
-								</div>
-								<div><canvas id="canvas_bmi" chart-colors="colors"></canvas></div>
-							</ons-carousel-item >
-						</ons-carousel>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="contents-box my-trainer">
-				<h3 class="h3_1 c_umain">マイトレーナー</h3>
-
-				<div class="thumbnail-list">
-					<ons-carousel fullscreen swipeable overscrollable item-width="80px" auto-scroll auto-scroll-ratio="0.3">
-						<ons-carousel-item ng-repeat="profile in profile_list" class="home_mytrainer" ng-click="trainer_detail_c(profile.id)">
-							<ons-button class="b_none pr12 relative pro_image_dev">
-								<img ng-src="{{profile.profile_url}}" alt="" class="square60 maru pro_image">
-							</ons-button>
-							<div class="align_c pr12 font10">{{profile.name}}</div>
-						</ons-carousel-item>
-					</ons-carousel>
-				</div>
-				<div class="align_c">
-					<ons-button class="pt04 pb04 w60 b_umain" ng-click="trainer_list_c()">
-						<div class="flex">
-							<div class="w20 flex_center align_c">
-								<icon class="font20 bold icon-icon-18"></icon>
+ 	<div class="tab-contents">
+ 		<div id="home">
+			<ons-list class="">
+				<ons-list-item class="card" ng-repeat="lession in lession_list | orderBy:column | filter:filter:false" ng-click="open_lession_list(lession)">
+					<div class="box b_drak ">
+						<div class="flex mb04 h65r">
+							<div class="flex_center pro_image_dev ml20">
+								<img ng-src="images/lesson/lesson.png" ng-click="img_view(lession.url_image,$event)" class="maru square50 pro_image border05">
 							</div>
-							<div class="w60 align_c flex_center">
-								トレーナーを探す
+							<div class="ml12 flex_center">
+
+								<div class="font14">
+									{{lession.name}}
+								</div>
+
 							</div>
-							<div class="w20 flex_center align_c">
+							<div class="flex_right align_r">
+								<ons-icon
+									  icon="ion-paperclip"
+									  size="30px"
+									  fixed-width="false"
+									  style="color: black">
+								</ons-icon>
 							</div>
 						</div>
-					</ons-button>
-				</div>
-			</div>
-			<!--
-			<div class="contents-box training-day">
-				<h3 class="h3_1 c_umain">連続トレーニング日数</h3>
-				<div class="box-list">
-					<div class="box">
-						<p class="m0">12日</p>
-						<p class="m0">現在の記録</p>
 					</div>
-					<div class="box">
-						<p class="m0">53日</p>
-						<p class="m0">自己ベスト</p>
-					</div>
-				</div>
-			</div>
-			-->
 
-
-
-			<div class="contents-box mytraining-history">
-
-				<h3 class="h3_1 c_umain">マイトレ履歴</h3>
-
-				<div class="inner">
-
-					<ons-carousel fullscreen swipeable overscrollable item-width="245px" item-height="210" ng-if="mytrain_list.length!=0">
-						<ons-carousel-item ng-repeat="mytrain in mytrain_list | orderBy:'-end_date'" class="home_mytrain" ng-click="mytrain_detail_c(mytrain.id)">
-							<div class="box history relative">
-								<p class="date" style="margin: 0;">{{mytrain.end_date}}</p>
-								<div class="maru c_white absolute b_orange p_right0 square16">{{mytrain.counta}}</div>
-								<div ng-style="{'background-image': 'url({{mytrain.thumb}})','background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center'}">
-									<div style="background-color: rgba(0,0,0,0.7)">
-										<div class="box-inner pt10 pr06 pl06 pb10">
-											<table class="c_white">
-												<caption class="bold align_l">{{ mytrain.menu }}</caption>
-												<tbody>
-													<tr ng-repeat="set in mytrain.menu_set">
-														<th class="align_l">{{set.title}}</th>
-														<td class="b_none">× {{set.count_run_training_set_id}}セット</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								<div id="mytrain_detail_back"></div>
-							</div>
-						</ons-carousel-item>
-					</ons-carousel>
-					<div ng-if="mytrain_list.length==0">未読コメントはありません</div>
-				</div>
-				<div class="align_c mt20">
-					<ons-button class="pt04 pb04 w60 b_umain" ng-click="mytrain_list_c();">
-						<div class="flex">
-							<div class="w80 align_l border-box ml12 flex_center">
-								マイトレ履歴一覧へ
-							</div>
-							<div class="w20 flex_center align_c">
-								<icon class="font20 bold icon-icon-09"></icon>
-							</div>
-						</div>
-					</ons-button>
-				</div>
-			</div>
-
-
-			<div class="contents-box meal-history">
-
-				<h3 class="h3_1 c_umain">食事履歴</h3>
-
-				<div class="inner">
-
-					<ons-carousel fullscreen swipeable overscrollable item-width="135px" ng-if="food_tl.length!=0">
-						<ons-carousel-item ng-repeat="food in food_tl" class="home_food" ng-click="food_detail_c($index);">
-							<div class="box">
-								<div class="box-inner" style="height:214px">
-									<p class="date mt0 mb08">{{food.date}}</p>
-									<div ng-style="{{food.top_image}}"></div>
-									<p class="type mt04 mb0">{{food.time_zone}}</p>
-									<p class="description mt04 ml04 mb04 text_over" style="height: 20px;">{{food.meal_item[0].title}}</p>
-									<p class="description mt04 ml04 mb04 text_over" style="height: 20px;">{{food.meal_item[1].title}}</p>
-									<p class="cal pt08 mb08">{{food.cal}}kcal</p>
-								</div>
-								<span ng-if="food.comment!=0">{{food.comment}}</span>
-							</div>
-						</ons-carousel-item>
-					</ons-carousel>
-					<div ng-if="food_tl.length==0">未読コメントはありません</div>
-
-				</div>
-
-			</div>
-			<div class="contents-box cal-graph">
-				<h3 class="h3_1 c_umain">カロリーグラフ（kcal）</h3>
-				<div class="align_c">
-					<canvas id="line_canvas" chart-colors="colors" ></canvas>
-				</div>
-			</div>
-			<div class="contents-box eiyouso">
-				<h3 class="h3_1 c_umain">最近1週間の栄養素</h3>
-				<div class="align_c">
-					<canvas id="radar_canvas" ></canvas>
-				</div>
-				<div class="align_c mt20">
-					<ons-button class="pt04 pb04 w60 b_umain" ng-click="food_list_c();">
-						<div class="flex">
-							<div class="w80 align_l border-box ml12 flex_center">
-								食事履歴一覧へ
-							</div>
-							<div class="w20 flex_center align_c">
-								<icon class="font20 bold icon-icon-09"></icon>
-							</div>
-						</div>
-					</ons-button>
-				</div>
-
-			</div>
-
-
-
-			<div class="contents-box information-by-owner">
-
-				<h3 class="h3_1 c_umain">運営者からのお知らせ</h3>
-
-				<div class="card box" ng-repeat="notice in notice_list" ng-click="notice_click($index)">
-					<div class="float">
-						<div class="right font12">{{ notice.date}}</div>
-					</div>
-					<div class="bold mb08">{{notice.title}}</div>
-				</div>
-
-				<div class="align_c mt20">
-					<ons-button class="pt04 pb04 w60 b_umain" ng-click="noticelist();">
-						<div class="flex">
-							<div class="w80 align_l border-box ml12 flex_center">
-								お知らせ一覧へ
-							</div>
-							<div class="w20 flex_center align_c">
-								<icon class="font20 bold icon-icon-09"></icon>
-							</div>
-						</div>
-					</ons-button>
-				</div>
-				<div class="align_c mt20 mb20">
-                    <ons-button class="pt04 pb04 w60 b_umain" ng-click="goMessageBox();">
-                        <div class="flex">
-                            <div class="w80 align_l border-box ml12 flex_center">
-                                ご意見箱
-                            </div>
-                            <div class="w20 flex_center align_c">
-                                <icon class="font20 bold icon-icon-09"></icon>
-                            </div>
-                        </div>
-                    </ons-button>
-                </div>
-				</div>
-
-			</div>
+				</ons-list-item>
+			</ons-list>
+ 		</div>
+	</div> 
 </ons-page>
