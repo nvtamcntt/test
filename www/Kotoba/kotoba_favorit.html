@@ -1,22 +1,24 @@
-<ons-page class="trainer_list" ng-controller="KotobaListController">
+<ons-page class="trainer_list" ng-controller="KotobaFavoritController">
 	<ons-toolbar >
 		<div class="left">
-			<div class="btn" ng-click="back();"><img src="images/back1.png" alt="" style="margin-left: -1rem;" class="bargar"></div>
+			<div class="btn" ng-click="tl.menu.toggleMenu();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
 		</div>
-		<div class="center">
+		<div class="center h100 flex flex_center_align-items">
+			<span class="text_center font20 c_white">Từ vựng ghi nhớ</span>
+		</div>
+		<!-- <div class="center">
 				<input type="text" class="text-input text-input--transparent font20 c_white" 
 				style="width:90%;
 			    height: 44px;
 			    margin-left: 4rem;
-			    /*background-color: red;*/
 			    " 
 			    placeholder="Tìm kiếm từ"></input>
 		</div>
 		<div class="right">
 			<div class="btn" ng-click="search();"><img src="images/search.png" alt="" class="bargar"></div>
-		</div>
+		</div> -->
 	</ons-toolbar>
-
+	<!-- ng-repeat="item in items" -->
 	<div class="mt02">
 		<ons-list class="b_gray1">
 			<ons-list-item class="card m0" ng-repeat="kotoba in kotoba_list | orderBy:column | filter:filter:false" >
@@ -56,5 +58,8 @@
 				
 			</ons-list-item>
 		</ons-list>
+	</div>
+	<div style="text-align: center" ng-if ="is_show_error">
+		<div>Không có từ vựng nào được ghi nhớ</div>
 	</div>
 </ons-page>

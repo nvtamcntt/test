@@ -6,25 +6,34 @@ module.controller('LoginController', ['$scope', '$http','$timeout','$window','Sh
 	ParamList_R = SharedScopes.get();
 	SharedScopes.delete();
 	var is_click = false ;
+	var require_login = false;
 	is_click = ParamList_R['is_click'];
+	require_login = ParamList_R['require_login'];
 	var c_id = localStorage.getItem('id');
 	var c_pass = localStorage.getItem('pass');
 	$scope.id_error = "";
 	console.log("gia tri id " + c_id);
 	console.log("gia tri pass " + c_pass);
-	// login(c_id,c_pass,"auto");
-	if(c_id !=null && c_pass != null){
-		console.log("auto");
-		login(c_id,c_pass,"auto");
-	}
+	
+	login(c_id,c_pass,"auto");
+	// if( c_id !=null && c_id != "" && c_pass != null && c_pass != ""){
+	// 	console.log("auto");
+	// 	login(c_id,c_pass,"auto");
+	// }
+	// else {
+	// 	$scope.login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'fade' } );	
+	// }
 
 	function login (c_id,c_pass,mode){
 		if (is_click){
 			c_id = document.getElementById("id").value;
 			c_pass = document.getElementById("pass").value;
+		}else if (require_login){
+			require_login = false;
+			return;
 		}
-		console.log("gia tri sau khi loat " + c_id);
-		console.log("gia tri sau khi loat " + c_pass);
+		// console.log("gia tri sau khi loat " + c_id);
+		// console.log("gia tri sau khi loat " + c_pass);
 		$http({
 			method: 'POST',
 			url: host+'/php/select/login.php',
@@ -61,9 +70,10 @@ module.controller('LoginController', ['$scope', '$http','$timeout','$window','Sh
 					// $scope.login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'slide' } );
 				// }
 				//navigator.splashscreen.hide();
-			}else {
-				$scope.login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'fade' } );	
 			}
+			// else {
+			// 	$scope.login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'fade' } );	
+			// }
 			
 			var login_id = localStorage.getItem('user_id');
 			//console.log(login_id)

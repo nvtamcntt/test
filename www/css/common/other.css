@@ -139,3 +139,17 @@
     margin: 2%;
     font-size: 14px;
 }
+.icon-close {
+    width: 25px;
+    height: 25px;
+    margin-top: 1.4rem;
+    margin-right: 1.4rem;
+}
+.icon-right {
+    width: 4rem;
+    margin-right: 0.4rem;
+}
+.icon-left {
+    width: 4rem;
+    margin-left: 0.4rem;
+}

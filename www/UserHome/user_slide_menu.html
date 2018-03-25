@@ -8,22 +8,24 @@
 				  fixed-width="false"
 				  style="color: white">
 			</ons-icon>
-			<div class="w55 align_c">
+			<div class="align_c">
 				<span class="font13 c_white" >{{username}}</span>	
 			</div>
 		</div>
-		<div class="box card normal border border_white bc_gray1 align_c " ng-if="!login" >
-			<!-- <img class="square22 maru pro_image bc_white" src="images/icon/ios7-heart-outline.png" alt=""> -->
-			<span class="text_center font14 c_white" data-num="0" ng-click="menu_click($event);registration();">Đăng nhập</span>
+			<div class="w73">
+				<div class="border border_white bc_gray1 align_c w69 mt60 mb02 h17r ml28" ng-if="!login" >
+				<!-- <img class="square22 maru pro_image bc_white" src="images/icon/ios7-heart-outline.png" alt=""> -->
+					<span class="font14 c_white" data-num="0" ng-click="menu_click($event);registration();">Đăng nhập</span>
+				</div>
+				<div class="border border_white bc_gray1 align_c w69 mt60 mb02 h17r ml28" ng-if="login">
+				<!-- <img class="square22 maru pro_image bc_white" src="images/icon/ios7-heart-outline.png" alt=""> -->
+					<span class="text_center font14 c_white" data-num="0" ng-click="menu_click($event);logout();">Thoát</span>
+				</div>
+			</div>
 		</div>
-		<div class="box card normal border border_white bc_gray1 align_c " ng-if="login">
-			<!-- <img class="square22 maru pro_image bc_white" src="images/icon/ios7-heart-outline.png" alt=""> -->
-			<span class="text_center font14 c_white" data-num="0" ng-click="menu_click($event);logout();">Thoat</span>
-		</div>
-	</div>
 	<ul>
 		<li ng-click="menu_click($event);tuvung();"><a data-num="1" class="current"><span class="no_click">Từ vựng </span></a></li>
-		<li ng-click="menu_click($event);footer('base_timeline');timeline();"><a data-num="2"><span class="no_click">Chuyên ngành</span></a></li>
+		<li ng-click="menu_click($event);favarit();"><a data-num="2"><span class="no_click">Từ vựng ghi nhớ</span></a></li>
 		<li ng-click="menu_click($event);footer('base_mytraining');MyTraining();"><a data-num="3"><span class="no_click">Hỏi đáp</span></a></li>
 		<li ng-click="menu_click($event);footer('base_trainer_list');trainer_list();"><a data-num="4"><span class="no_click">Tư vấn</span></a></li>
 		<li ng-click="menu_click($event);footer('base_mytraining');MyTraining();"><a data-num="5"><span class="b_none_click">Hỏi đáp</span></a></li>

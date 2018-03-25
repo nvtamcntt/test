@@ -14,7 +14,7 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 		$scope.username = "Bạn tôi";
 		$scope.login = false;
 	} 
-	console.log($scope.username);
+	// console.log($scope.username);
 	$scope.menu_click = function($event){
 		tl.menu.closeMenu();
 		var num = $($event.target).attr('data-num');
@@ -64,12 +64,36 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 			// main_modal.hide();
 		}});
 	}
+	$scope.favarit = function(){
+		// ParamList_W['is_exit'] = true;
+		// SharedScopes.set(ParamList_W);
+		if (!id){
+			ons.notification.alert({
+				message: 'Vui lòng đăng nhập để sử dụng tính năng ghi nhớ từ vựng!',
+				title: 'Thông báo',
+				buttonLabel: 'OK',
+				animation: 'default', 
+				callback: function() {
+					ParamList_W['require_login'] = true;
+					SharedScopes.set(ParamList_W);
+					main_navigator.resetToPage('Login/login.html', { animation: 'slide' });
+				}
+			});
+		}else {
+			main_navigator.resetToPage('Kotoba/kotoba_favorit.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+			}});
+		}
+
+	}
 
 
 	$scope.logout = function(){
 		localStorage.setItem('session_id',"");
 		localStorage.setItem('id',"" );
 		localStorage.setItem('pass',"" );
+		id = "";
+		user_id = "";
 		login_navigator.resetToPage('UserHome/user_slide.html', { animation : 'none' ,onTransitionEnd : function() {
 			// main_modal.hide();
 		}});

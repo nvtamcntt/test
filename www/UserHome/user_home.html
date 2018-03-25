@@ -15,10 +15,10 @@
 	<!-- tab content -->
 	<div id="contents" class="home">
 		<div class="flex b_drak">
-			<div class="align_c w50 c27 mtb12 border_r c_border_umain" ng-click="main_navigator.resetToPage('Kotoba/load_n3.html',{ animation : 'none' });" >
+			<div class="align_c w50 c27 mtb12 border_r c_border_umain" ng-click="main_navigator.replacePage('Kotoba/load_n3.html',{ animation : 'none' });" >
 					N3
 			</div>
-			<div class="align_c w50 c_black mtb12" ng-click="main_navigator.resetToPage('Kotoba/load_n2.html',{ animation : 'none' });">
+			<div class="align_c w50 c_black mtb12" ng-click="main_navigator.replacePage('Kotoba/load_n2.html',{ animation : 'none' });">
 					N2
 			</div>
 		</div>
@@ -40,12 +40,12 @@
 
 							</div>
 							<div class="flex_right align_r">
-								<ons-icon
+						<!-- 		<ons-icon
 									  icon="ion-paperclip"
 									  size="30px"
 									  fixed-width="false"
 									  style="color: black">
-								</ons-icon>
+								</ons-icon> -->
 							</div>
 						</div>
 					</div>

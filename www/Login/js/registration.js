@@ -1,32 +1,9 @@
 // This is a JavaScript file
 
 module.controller('MemberRegistrationController', ['$scope', '$http','SharedScopes','$timeout', function ($scope, $http,SharedScopes,$timeout) {
-    var prof_photos = [];
-    $scope.prof_photos = [];
-    var back_photos = [];
-    $scope.back_photos = [];
-    $scope.prof_imagesUrl=null;
-    $scope.back_imagesUrl=null;
-
-    $scope.sex_sel="男";
-    $scope.trainer_flag_sel="0";
-
     var ParamList_R = [];
     var ParamList_W = [];
 
-    var update = function() {
-        ParamList_R = SharedScopes.get();
-        SharedScopes.delete();
-        if(ParamList_R['area']!=undefined ){
-            $scope.area = ParamList_R['area'];
-        }
-    };
-    update();
-    setInterval(function() {
-      $scope.$apply(update);
-    }, 1000);
-
-    //$scope.sex_sel = "男";
 
     $scope.sex_sel_set = {
         theme: 'auto',
@@ -48,8 +25,6 @@ module.controller('MemberRegistrationController', ['$scope', '$http','SharedScop
 
 
     $scope.member_registration_ck = function() {
-
-
         var mail =$("#me_mail").val();
         $http({
             method: 'POST',
@@ -133,12 +108,13 @@ module.controller('MemberRegistrationController', ['$scope', '$http','SharedScop
                     })
                 })
                 .success(function(data, status, headers, config) {
-                    // console.log(data);
-                    console.log("loi" , data);
+                    localStorage.setItem('id',$me_mail );
+                    localStorage.setItem('pass',$("#me_pass").val() );
                     main_navigator.pushPage('Login/login.html');
                 })
                 .error(function (data, status, headers, config) {
                      $scope.message = data;
+                     main_navigator.pushPage('Login/session_ng.html');
                 });
             }
 

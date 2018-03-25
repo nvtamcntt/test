@@ -73,10 +73,9 @@ module.controller('KotobaDetailController', ['$scope', '$http', '$sce','$rootSco
 	  	// carousel.setActiveCarouselItemIndex(6);
 	};
 	$scope.close = function() {
-		ParamList_W['lession'] = lession;
-		SharedScopes.set(ParamList_W);
-		$scope.main_navigator.pushPage("Kotoba/kotoba_list.html", { animation : 'slide' ,onTransitionEnd : function() {
-		}});
+		// ParamList_W['lession'] = lession;
+		// SharedScopes.set(ParamList_W);
+		$scope.main_navigator.popPage();
 	};
 
 	function get_position(index){
