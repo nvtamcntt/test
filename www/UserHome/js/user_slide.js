@@ -64,6 +64,11 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 			// main_modal.hide();
 		}});
 	}
+	$scope.search = function(){
+		main_navigator.resetToPage('Kotoba/kotoba_search.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
 	$scope.favarit = function(){
 		// ParamList_W['is_exit'] = true;
 		// SharedScopes.set(ParamList_W);

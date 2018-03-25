@@ -9,6 +9,7 @@ document.write('<script type="text/javascript" src="Kotoba/js/kotoba_detail.js">
 document.write('<script type="text/javascript" src="Kotoba/js/load_n2.js"></script>');
 document.write('<script type="text/javascript" src="Kotoba/js/load_n3.js"></script>');
 document.write('<script type="text/javascript" src="Kotoba/js/kotoba_favorit.js"></script>');
+document.write('<script type="text/javascript" src="Kotoba/js/kotoba_search.js"></script>');
 
 
 document.write('<script type="text/javascript" src="Login/js/registration.js"></script>');

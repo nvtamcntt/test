@@ -85,7 +85,6 @@ module.controller('KotobaFavoritController', ['$scope', '$http', '$sce','$rootSc
 
 		ParamList_W['list_kotoba'] = $scope.kotoba_list;
 		SharedScopes.set(ParamList_W);
-		console.log(index);
 		$scope.main_navigator.pushPage("Kotoba/kotoba_detail.html", { animation : 'slide' ,onTransitionEnd : function() {
 		}});
 	}
