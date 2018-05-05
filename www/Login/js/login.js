@@ -12,8 +12,6 @@ module.controller('LoginController', ['$scope', '$http','$timeout','$window','Sh
 	var c_id = localStorage.getItem('id');
 	var c_pass = localStorage.getItem('pass');
 	$scope.id_error = "";
-	console.log("gia tri id " + c_id);
-	console.log("gia tri pass " + c_pass);
 	
 	login(c_id,c_pass,"auto");
 	// if( c_id !=null && c_id != "" && c_pass != null && c_pass != ""){

@@ -1,4 +1,5 @@
 <ons-page class="trainer_list" ng-controller="KotobaListController">
+
 	<ons-toolbar >
 		<div class="left">
 			<div class="btn" ng-click="back();"><img src="images/back1.png" alt="" style="margin-left: -1rem;" class="bargar"></div>
@@ -15,15 +16,16 @@
 		<div class="right">
 			<div class="btn" ng-click="gotoAnchor(search_input);"><img src="images/search.png" alt="" class="bargar"></div>
 		</div>
+	
 	</ons-toolbar>
 
 	<div class="mt02">
 		<ons-list class="b_gray1">
-			<ons-list-item id="anchor{{kotoba.number%100}}" class="card m0" ng-repeat="kotoba in kotoba_list" >
+			<ons-list-item id="anchor{{kotoba.number}}" class="card m0" ng-repeat="kotoba in kotoba_list  track by $index" >
 				<!--  | filter:{'number': search_input} -->
 				<div class="box card1 normal mb-01">
 					<div class="flex mb04">
-						<div class="flex_right align_r font18 maru square24 c_border_black border bold">
+						<div class="flex_right align_r font18 maru square24 c_border_black border bold" style="width: 3.2rem">
 							{{kotoba.number}}
 						</div> 
 						<div class="ml02 flex_bottom w90 ">
@@ -45,11 +47,16 @@
 									  fixed-width="false"
 									  style="color: black">
 								</ons-icon>
+
 								<span class="c_black">{{kotoba.example1}}。</span>
 							</div>
 						</div>
-						<div class="flex_right align_r" ng-click="set_favorite(kotoba)">
-							<icon class="font20 icon-icon-20" ng-class="{c_red: kotoba.goi_favorite}"></icon>
+						<div class="flex_right align_r">
+							<icon class="font20 icon-icon-20"  ng-click="set_favorite(kotoba)"></icon>
+							<div >
+				
+					  			<ons-icon size="23px" icon="ion-volume-high" style="color: black; margin-top:5.8rem" ng-click="set_play_audio(kotoba)"></ons-icon>
+				  			</div>
 						</div>
 
 					</div>
@@ -58,4 +65,16 @@
 			</ons-list-item>
 		</ons-list>
 	</div>
+<!-- 	<ons-bottom-toolbar>
+	  <div style="text-align: center; line-height: 44px">Text</div>
+	  <div class="w95" id="button_prev_next" style="margin-top: 74%">
+
+		<div class="right" style="margin-right: -1rem;">
+		  <div class="btn" ng-click="next()">
+				<img src="images/next.png" alt="" class="bargar icon-right">
+			</div>
+		</div>
+	</div>
+	</ons-bottom-toolbar> -->
+
 </ons-page>

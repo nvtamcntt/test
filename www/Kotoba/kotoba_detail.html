@@ -1,4 +1,4 @@
-<ons-page ng-controller="KotobaDetailController" class="t_partner_detail">
+<ons-page ng-controller="KotobaDetailController">
 	<div class="align_r" id="button_close">
 		<div class="btn" ng-click="close()">
 			<img src="images/close.png" alt="" class="bargar icon-close">
@@ -22,7 +22,7 @@
     <ons-carousel-item ng-repeat="kotoba in list_kotoba" >
 		<div class="card border h100">
 			<div class="mt05">
-				<div class="flex_center align_c font18 maru square24 c_border_black border bold" style="margin-left: 45%;">
+				<div class="flex_center align_c font18 maru square24 c_border_black border bold" style="margin-left: 45%;width: 3.2rem">
 					{{kotoba.number}}
 				</div>
 
@@ -77,11 +77,11 @@
 			<div class="w98">
 				<div>
 					<div class="display ml20">
-						<div class="maru border square24 mr10 w34">
+						<div class="maru border square24 mr10 w34" style="width:8%">
 							<span class="font16 mt08">1</span>
 						</div>
-						<div class="">
-							<span class="font14 bold">{{kotoba.example1}}。</span>
+						<div class="w88">
+							<span class="font16 bold">{{kotoba.example1}}。</span>
 						</div>
 					</div>
 					<div class="ml50 mt05 mb10">
@@ -95,11 +95,11 @@
 			<div class="w98" ng-if="kotoba.example2!=null">
 				<div>
 					<div class="display ml20">
-						<div class="maru border square24 mr10 w34">
+						<div class="maru border square24 mr10 w34" style="width:8%">
 							<span class="font16 mt08">2</span>
 						</div>
-						<div class="">
-							<span class="font14 bold">{{kotoba.example2}}。</span>
+						<div class="w88">
+							<span class="font16 bold">{{kotoba.example2}}。</span>
 						</div>
 					</div>
 					<div class="ml50 mt05 mb10">
@@ -112,11 +112,11 @@
 			<div class="w98" ng-if="kotoba.example3!=null">
 				<div>
 					<div class="display ml20">
-						<div class="maru border square24 mr10 w34">
+						<div class="maru border square24 mr10 w34" style="width:8%">
 							<span class="font16 mt08">3</span>
 						</div>
-						<div class="">
-							<span class="font14 bold">{{kotoba.example3}}。</span>
+						<div class="w88">
+							<span class="font16 bold">{{kotoba.example3}}。</span>
 						</div>
 					</div>
 					<div class="ml50 mt05 mb10">
@@ -130,13 +130,13 @@
 			<div class="w98" ng-if="kotoba.trainghia!=null">
 				<div>
 					<div class="display ml20 w90">
-						<div class="align_c card border square28 mr20 b_drak2">
+						<div class="align_c card border square28 b_drak2 w15">
 							<span class="font16 bold ">対</span>
 						</div>
 						<div class="">
-							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="trainghia in kotoba.trainghia">
+							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="trainghia in kotoba.trainghia" ng-class="{mt10:kotoba.trainghia.length==1}">
 								<div class="align_l">
-									<span class="font14">{{trainghia}}</span>
+									<span class="font14">{{trainghia}}.</span>
 								</div>
 							</ons-list-item>
 						</div>
@@ -146,13 +146,13 @@
 			<div class="w98" ng-if="kotoba.hopnghia!=null">
 				<div>
 					<div class="display ml20 w90">
-						<div class="align_c card border square28 mr20 b_drak2">
+						<div class="align_c card border square28 b_drak2 w15">
 							<span class="font16 bold ">合</span>
 						</div>
 						<div class="">
-							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="hopnghia in kotoba.hopnghia">
+							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="hopnghia in kotoba.hopnghia" ng-class="{mt10:kotoba.hopnghia.length==1}">
 								<div class="align_l">
-									<span class="font14">{{hopnghia}}</span>
+									<span class="font14">{{hopnghia}}.</span>
 								</div>
 							</ons-list-item>
 						</div>
@@ -163,13 +163,13 @@
 			<div class="w98" ng-if="kotoba.lienquan!=null">
 				<div>
 					<div class="display ml20 w90">
-						<div class="align_c card border square28 mr20 b_drak2">
+						<div class="align_c card border square28 b_drak2 w15">
 							<span class="font16 bold ">関</span>
 						</div>
 						<div class="">
-							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="lienquan in kotoba.lienquan">
+							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="lienquan in kotoba.lienquan"  ng-class="{mt10:kotoba.lienquan.length==1}">
 								<div class="align_l">
-									<span class="font14">{{lienquan}}</span>
+									<span class="font14">{{lienquan}}.</span>
 								</div>
 							</ons-list-item>
 						</div>
@@ -180,13 +180,13 @@
 			<div class="w98" ng-if="kotoba.tuongtu!=null">
 				<div>
 					<div class="display ml20 w90">
-						<div class="align_c card border square28 mr20 b_drak2">
+						<div class="align_c card border square28 b_drak2 w15">
 							<span class="font16 bold ">類</span>
 						</div>
 						<div class="">
-							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="tuongtu in kotoba.tuongtu">
+							<ons-list-item class="" style="margin-bottom: -2rem;" ng-repeat="tuongtu in kotoba.tuongtu" ng-class="{mt10:kotoba.tuongtu.length==1}">
 								<div class="align_l">
-									<span class="font14">{{tuongtu}}</span>
+									<span class="font14">{{tuongtu}}.</span>
 								</div>
 							</ons-list-item>
 						</div>

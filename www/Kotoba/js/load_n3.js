@@ -11,11 +11,13 @@ module.controller('LoadN3Controller', ['$scope', '$filter', '$http', '$sce','$wi
 	}
 
 	$scope.open_lession_list = function (lession){
-		console.log(lession);
+		//console.log(lession);
 		ParamList_W['lession'] = lession;
+		ParamList_W['level'] = 3;
 		SharedScopes.set(ParamList_W);
 		
 		$scope.main_navigator.pushPage("Kotoba/kotoba_list.html", { animation : 'slide' ,onTransitionEnd : function() {
+			main_modal.hide();
 		}});
 	}
 
@@ -26,7 +28,8 @@ module.controller('LoadN3Controller', ['$scope', '$filter', '$http', '$sce','$wi
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
 			data: $.param({
 				session_id: localStorage.getItem('session_id'),
-				user_id: id
+				user_id: id,
+				level : 3
 			})
 		})
 		.success(function(data, status, headers, config) {

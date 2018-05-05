@@ -32,9 +32,14 @@
 .c_border_tmain{
 	border-color: #E50150;
 }
-
+.c_border_green{
+	border-color: #4d81ed;
+}
 .c_border_gray{
 	border-color: #CCCCCC;
+}
+.c_border_blue1{
+	border-color: #2F74CD;
 }
 
 .under_tensen {

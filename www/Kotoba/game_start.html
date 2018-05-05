@@ -1,0 +1,63 @@
+<ons-page class="trainer_list" ng-controller="GameStartController">
+	<ons-toolbar >
+		<!-- <div class="left">
+			<div class="btn" ng-click="tl.menu.toggleMenu();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
+		</div> -->
+		<div class="left">
+			<div class="btn" ng-click="back();"><img src="images/back1.png" alt="" style="margin-left: -1rem;" class="bargar"></div>
+		</div>
+		<div class="center">
+			<span class="text_center font20 c_white ">{{show_index}}</span>
+		</div>
+		<div class="right flex">
+			<ons-icon class="" size="20px" icon="ion-heart" style="color: white; margin-top: 1.2rem"></ons-icon>
+			<div class="card3 border w25 text_center pt04">
+				<span class="text_center font15 c_white">{{show_coin}}</span>
+			</div>
+			
+		</div>
+	</ons-toolbar>
+	<!-- ng-repeat="item in items" -->
+	<div class=" w100 h100">
+		<div class="center align_c h10 pt28 font16 text_over normal">
+			<span>Chọn đáp án đúng!</span>
+		</div>
+		<div class="flex">
+			<div class="maru square40 b_white">
+				
+	  			<ons-icon size="30px" icon="ion-volume-high" style="color: black; margin-top: 20%" ng-click="play_audio(question)"></ons-icon>
+	  		</div>
+			<div class="w70">
+				<div class="center font20 text_over normal c_umain text_left ml10 bold">
+					<span>{{question.question_title}}</span>
+				</div>
+				<div class="center font12 text_over normal c_black text_left ml10 bold">
+					<span>{{question.question_more}}</span>
+				</div>
+			</div>
+			
+		</div>
+		<div ng-model="indexs"></div>
+		<div class="b_white card border c_border_blue1" ng-model="question_check" >
+			<div class="box font16 border c_border_blue1" ng-click="check_correct_question(1)" ng-class="{c_red: (question_check=='1'&& indexs==1) ,c_green_1: (question_check=='2'&& indexs==1)}">
+				<input type="radio" value="1" name="trainer_radio" id="radio11" >
+				<label for="radio11" class="radio">{{question.answer_one}}</label>
+			</div>
+			<div class="box font16 border c_border_blue1" ng-click="check_correct_question(2)"  ng-class="{c_red: (question_check=='1'&& indexs==2) ,c_green_1: (question_check=='2'&& indexs==2)}">
+				<input type="radio" value="2" name="trainer_radio" id="radio22">
+				<label for="radio22" class="radio">{{question.answer_two}}</label>
+			</div>
+			<div class="box font16 border c_border_blue1" ng-click="check_correct_question(3)"  ng-class="{c_red: (question_check=='1'&& indexs==3) ,c_green_1: (question_check=='2'&& indexs==3)}">
+				<input type="radio" value="3" name="trainer_radio" id="radio33">
+				<label for="radio33" class="radio">{{question.answer_there}}</label>
+			</div>
+			<div class="box font16 border c_border_blue1" ng-click="check_correct_question(4)"  ng-class="{c_red: (question_check=='1'&& indexs==4) ,c_green_1: (question_check=='2'&& indexs==4)}">
+				<input type="radio" value="4" name="trainer_radio" id="radio44" >
+				<label for="radio44" class="radio">{{question.answer_for}}</label>
+			</div>
+		</div>
+
+	    <div class="flex_center_align-items flex_center align_r mr10 mt50"><ons-button class="w50 align_c border c_border_green b_white" ng-click="next_question()"><span class="c_green">Tiếp theo</span></ons-button></div>
+	</div>
+
+</ons-page>

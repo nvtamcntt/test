@@ -101,6 +101,9 @@
 .w85 {
     width: 85%;
 }
+.w88 {
+    width: 88%;
+}
 .w90 {
     width: 90%;
 }
@@ -126,6 +129,9 @@
 }
 .w3r {
     width: 3rem;
+}
+.w32r {
+    width: 3.2rem;
 }
 .w4r {
     width: 4rem;

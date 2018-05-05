@@ -1,0 +1,27 @@
+<ons-page class="notice" ng-controller="NewConmmentController">
+	<ons-toolbar ng-class="t_back" id="globalHeader">
+		<div class="left">
+			<div class="btn" ng-click="main_navigator.popPage();"><img src="images/tl/back.png" alt="" class="back"></div>
+		</div>
+		<div class="center">
+			Thêm góp ý
+		</div>
+		<div class="right">
+		</div>
+	</ons-toolbar>
+
+<!-- 	<div class="m08">
+		<h3 class="h3_1 c_tmain">タイトル</h3>
+		
+		<textarea cols="30" rows="10" class="box textarea h10 w100" ng-model="temp1"></textarea>
+	</div> -->
+	<div class="h30 m08">
+		<h3 class="h3_1">Nội dung</h3>
+		<textarea cols="30" rows="10" class="box textarea w100 h100" ng-model="content"></textarea>
+	</div>
+	</br></br>
+	<div class="flex_center_align-items flex_center align_c mt40"><ons-button class="w50 align_c border c_border_green b_white" ng-click="add_comment()"><span class="c_green">Lưu</span></ons-button></div>
+	</br>
+	</ons-page>
+
+

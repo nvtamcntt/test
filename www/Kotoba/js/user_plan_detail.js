@@ -4,7 +4,7 @@ module.controller('UserPlanDetailController', ['$scope', '$http', '$sce','Shared
 	var ParamList_W = [];
 	ParamList_R = SharedScopes.get();
 	SharedScopes.delete();
-	// console.log(ParamList_R.plan_list);
+	// //console.log(ParamList_R.plan_list);
 	$scope.plan_ok_show_flag=true;
 	$scope.all_note=false;
 	$scope.all_note_title="Read more";
@@ -54,7 +54,7 @@ module.controller('UserPlanDetailController', ['$scope', '$http', '$sce','Shared
 	}else{
 		$scope.note=ParamList_R.plan_list.note;
 	}
-	console.log($scope.show_plan_list);
+	//console.log($scope.show_plan_list);
 	if(ParamList_R.plan_list.plan_partner!=undefined){
 		$scope.show_plan_list_partner_length=ParamList_R.plan_list.plan_partner.length;
 	}else{
@@ -81,7 +81,7 @@ module.controller('UserPlanDetailController', ['$scope', '$http', '$sce','Shared
 	}
 	document.styleSheets[0].insertRule(background_css,0);//背景画像表示用*/
 
-	//console.log($scope.show_payment_method);
+	////console.log($scope.show_payment_method);
 	$scope.plan_ok=function(){
 		ParamList_W['plan_list']=ParamList_R.plan_list;
 		SharedScopes.set(ParamList_W);
@@ -111,7 +111,7 @@ module.controller('UserPlanDetailController', ['$scope', '$http', '$sce','Shared
 	}
 
 	$scope.other_plan = function(){
-		// console.log($scope.user_id);
+		// //console.log($scope.user_id);
 		ParamList_W['user_id'] = $scope.user_id;
 		ParamList_W['plan_user_tr_profile_url'] = $scope.plan_user_tr_profile_url;
 		ParamList_W['plan_user_name'] = $scope.plan_user_name;
@@ -127,7 +127,7 @@ module.controller('UserPlanDetailController', ['$scope', '$http', '$sce','Shared
 		ParamList_W=[];
 		// ParamList_W['trainer_list']=ParamList_R['trainer_list'];
 		ParamList_W['trainer_id']=temp_profile;
-		// console.log(temp_profile);
+		// //console.log(temp_profile);
 		SharedScopes.set(ParamList_W);
 		$scope.main_navigator.pushPage('Trainer/trainer_detail/trainer_detail.html', { animation : 'slide' ,onTransitionEnd : function() {
             $scope.click_lock = false;

@@ -1,0 +1,38 @@
+<ons-dialog  var="dialog_favorit" cancelable ng-controller="DialogFavoritController">
+	<div class="w100 h100 z1 p_left0 p_top0 flex flex_direction">
+		<div class="flex box">
+			<div class="flex_left align_c mt05">
+				
+				<span class="c23 font20"> Danh sách ghi nhớ </span>
+			</div>
+			<div class="flex_right">
+				<ons-button class="square28 b_none p0" ng-click="dialog_favorit.hide()"><img src="images/close.png" class="w100 h100"></ons-button>
+			</div>
+		</div>
+		<ons-scroller class="flex1">
+			<div class="scroll flex1 mb08">
+				<ons-list class="box scroll">
+					<div class="flex box mb01">
+						<div class="flex_center ml04">
+							<ons-icon size="35px" icon="ion-ios-plus-empty"></ons-icon>
+						</div>
+						<div class="flex_center flex1 ml04 text_over c_black ml20" ng-click= "create_favorit()">
+							Tạo mới danh sách.
+						</div>
+					</div>
+					<div class="flex box mb01" ng-repeat="list_favorit in list_favorit" ng-click= "add_to_favorit(list_favorit)" ng-class={b_gray4:list_favorit.click}>
+	
+						<div class="flex_center ml04">
+							<ons-icon size="35px" icon="ion-ios-plus-outline"></ons-icon>
+						</div>
+						<div class="flex_center flex1 ml04 text_over c_black ml20" >
+							{{list_favorit.title}}
+						</div>
+					</div>
+				</ons-list>
+			</div>
+		</ons-scroller>
+
+	</div>
+	<div class="h100 b_black opa08"></div>
+</ons-dialog>

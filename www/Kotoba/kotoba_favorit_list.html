@@ -1,44 +1,37 @@
-<ons-page class="trainer_list" ng-controller="KotobaListSearchController">
+<ons-page class="trainer_list" ng-controller="KotobaFavoritListController">
 	<ons-toolbar >
 		<div class="left">
-			<div class="btn" ng-click="menuOpen();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
+			<div class="btn" ng-click="tl.menu.toggleMenu();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
 		</div>
-		
 		<div class="center h100 flex flex_center_align-items">
-			<span class="text_center font20 c_white">Tìm kiếm từ</span>
+			<span class="text_center font20 c_white">Từ vựng ghi nhớ</span>
 		</div>
-	</ons-toolbar>
-	<div class="flex">
-		<div class="align_l">
-				<input type="text" class="text-input font20 c_black h43r w100"
-			    placeholder="Nhập kí tự" ng-model="search_input"></input>
-		</div>
-		<div class="select_box mobi align_r w34 h45r btn">
-			<select  ng-model="search_model" name='alphabet' mobiscroll-select="sex_sel_set" mobiscroll-instance="pj_model_in" class="w34 h45r">
-				<option value="0" selected="selected">Hiragana</option>
-				<option value="1" label="Kanji">Kanji</option>
-				<option value="2" label="Nghia">Nghĩa</option>
-				<option value="3" label="Hantu">Hán việt</option>
-			</select>
+		<!-- <div class="center">
+				<input type="text" class="text-input text-input--transparent font20 c_white" 
+				style="width:90%;
+			    height: 44px;
+			    margin-left: 4rem;
+			    " 
+			    placeholder="Tìm kiếm từ"></input>
 		</div>
 		<div class="right">
 			<div class="btn" ng-click="search();"><img src="images/search.png" alt="" class="bargar"></div>
-		</div>
-	</div>
+		</div> -->
+	</ons-toolbar>
+	<!-- ng-repeat="item in items" -->
 	<div class="mt02">
 		<ons-list class="b_gray1">
-			<ons-list-item id="anchor{{kotoba.number%100}}" class="card m0" ng-repeat="kotoba in kotoba_list  " >
-				
+			<ons-list-item class="card m0" ng-repeat="kotoba in kotoba_list track by $index | orderBy:column" >
 				<div class="box card1 normal mb-01">
 					<div class="flex mb04">
-						<div class="flex_right align_r font18 maru square24 c_border_black border bold" style="width: 3.2rem">
+						<div style="width: 3.2rem" class="flex_right align_r font18 maru square24 c_border_black border bold">
 							{{kotoba.number}}
 						</div> 
 						<div class="ml02 flex_bottom w90 ">
 							<div class="bold font26 mb04 text_over align_c">
 								<span class="c23">{{kotoba.kanji}}</span>
 							</div>
-							<div class="flex" ng-click="load_kotoba_detail(kotoba, $index, search_input);">
+							<div class="flex" ng-click="load_kotoba_detail(kotoba, $index);">
 								<div class="bold font16 w50 align_l">
 									<span class="c24">{{kotoba.hiragana}}</span>
 								</div>
@@ -46,7 +39,7 @@
 									<span class="c25">{{kotoba.nghia}}</span>
 								</div>
 							</div>
-							<div class="bold font14 mt04" ng-click="load_kotoba_detail(kotoba, $index, search_input);">
+							<div class="bold font14 mt04" ng-click="load_kotoba_detail(kotoba, $index);">
 								<ons-icon
 									  icon="ion-android-star-outline"
 									  size="20px"
@@ -65,5 +58,8 @@
 				
 			</ons-list-item>
 		</ons-list>
+	</div>
+	<div style="text-align: center" ng-if ="is_show_error">
+		<div>Không có từ vựng nào được ghi nhớ</div>
 	</div>
 </ons-page>

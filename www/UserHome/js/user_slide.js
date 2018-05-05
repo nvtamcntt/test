@@ -37,9 +37,9 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 				case 5:
 					num = 5;
 				break;
-				case 6:
-					num = 6;
-				break;
+				// case 6:
+				// 	num = 6;
+				// break;
 				case 0:
 					num = 0;
 				break;
@@ -69,6 +69,7 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 			// main_modal.hide();
 		}});
 	}
+
 	$scope.favarit = function(){
 		// ParamList_W['is_exit'] = true;
 		// SharedScopes.set(ParamList_W);
@@ -92,7 +93,22 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 
 	}
 
-
+	$scope.comment_list = function(){
+		main_navigator.resetToPage('manager/comment_list.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
+	
+	$scope.infor_app = function(){
+		main_navigator.resetToPage('manager/information.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
+	// $scope.admob = function(){
+	// 	main_navigator.resetToPage('manager/admob.html', { animation : 'none' ,onTransitionEnd : function() {
+	// 		// main_modal.hide();
+	// 	}});
+	// }
 	$scope.logout = function(){
 		localStorage.setItem('session_id',"");
 		localStorage.setItem('id',"" );
@@ -104,5 +120,16 @@ module.controller('UserSideFooterController', ['$scope', '$http', '$sce', '$comp
 		}});
 	}
 
+
+	$scope.game_setting_direct = function(){
+
+		// login_navigator.resetToPage('Kotoba/game_start.html', { animation : 'none' ,onTransitionEnd : function() {
+		// 	// main_modal.hide();
+		// }});
+
+		login_navigator.resetToPage('Kotoba/game_setting.html', { animation : 'none' ,onTransitionEnd : function() {
+			// main_modal.hide();
+		}});
+	}
 
 }]);

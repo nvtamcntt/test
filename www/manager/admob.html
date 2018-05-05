@@ -1,0 +1,118 @@
+<ons-page class="notice" ng-controller="AdmobController">
+	    <ons-navigator>
+        <ons-page>
+            <h3 style="text-align: center;">Monaca with AdMob Demo</h3>
+            
+            <div id="fullpage">
+                <h3>Banner Ads</h3>
+                        
+                <ons-input type="checkbox" id='overlap'>  overlap</ons-input>
+                &nbsp;&nbsp;&nbsp;
+                <ons-input type="checkbox" id='offsetTopBar'>  offsetTopBar</ons-input>
+                <br/><br/>
+                <ons-button id='btn_size' style="font-size: 80%; background-color: #25a6d9">
+                    <ons-icon icon="fa-chevron-down" fixed-width="false"></ons-icon>
+                    <span id="btn_size_txt">SMART_BANNER</span>
+                </ons-button>
+                <ons-button id='btn_pos' style="font-size: 80%; background-color: #25a6d9">
+                    <ons-icon icon="fa-chevron-down" fixed-width="false"></ons-icon>
+                    <span id="btn_pos_txt">BOTTOM_CENTER</span>
+                </ons-button>
+                <br /><br />
+                <ons-row>
+                    <ons-col>
+                        <ons-button id='btn_create'>Create Banner</ons-button>
+                        <ons-button id='btn_remove'>Remove Banner</ons-button>        
+                    </ons-col>
+                </ons-row>
+                <ons-row style="height: 10px;"></ons-row>
+                <ons-row>
+                    <ons-col>
+                        <ons-button id='btn_show'>Show Banner</ons-button>
+                        <ons-button id='btn_hide'>Hide Banner</ons-button>                
+                    </ons-col>
+                </ons-row>
+                <hr />
+            
+                <h3>Interstitial Ads</h3>
+                <ons-input id="autoshow" type="checkbox" checked>  auto show when ready</ons-input>
+                <br/><br/>
+                <ons-button id="btn_prepare">Prepare</ons-button>
+                <ons-button id="btn_showfull">Show</ons-button>
+
+            </div>
+            
+            <ons-template id="banner_size.html">
+                <ons-dialog var="dialog" cancelable mask-color="rgba(0, 0, 0, 0.7)">
+                    <div class="margin10 text-center">
+                    	<ons-toolbar inline>
+            	      		<div class="center">
+            	        		Ad's Size
+            	      		</div>
+            	    	</ons-toolbar>
+                		
+                		<ons-list style="margin:0; padding:0; font-size: 90%;">
+            			  	<ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_size" value='BANNER'>  BANNER</ons-input>
+            			  	</ons-list-item>
+            			  	<ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_size" value='FULL_BANNER'>  FULL_BANNER</ons-input>
+                		  	</ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_size" value='LEADERBOARD'>  LEADERBOARD</ons-input>
+                    	  	</ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_size" value='MEDIUM_RECTANGLE'>  MEDIUM_RECTANGLE</ons-input>
+                          	</ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_size" value="SMART_BANNER" checked>  SMART_BANNER</ons-input>
+                            </ons-list-item>
+            			</ons-list>
+                	</div>
+            	</ons-dialog>
+            </ons-template>	
+            
+            <ons-template id="banner_pos.html">
+                <ons-dialog var="dialog" cancelable mask-color="rgba(0, 0, 0, 0.7)" style="width: 90%; height: auto">
+                    <div class="margin10 text-center">
+                    	<ons-toolbar inline>
+            	      		<div class="center">
+                                Ad's Position
+            	      		</div>
+            	    	</ons-toolbar>
+                		
+                		<ons-list style="margin:0; padding:0; font-size: 90%">
+            			  	<ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='1'>  TOP_LEFT</ons-input>    
+                            </ons-list-item>    
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='2'>  TOP_CENTER</ons-input>        
+                            </ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='3'>  TOP_RIGHT</ons-input>
+            			  	</ons-list-item>
+                            <!--<ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='4'>  LEFT</ons-input>    
+                            </ons-list-item>    
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='5'>  CENTER</ons-input>        
+                            </ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='6'>  RIGHT</ons-input>
+                		  	</ons-list-item>-->
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='7'>  BOTTOM_LEFT</ons-input>
+                            </ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='8' checked>  BOTTOM_CENTER</ons-input>
+                            </ons-list-item>
+                            <ons-list-item modifier="tappable">
+                                <ons-input type="radio" name="radio_pos" value='9'>  BOTTOM_RIGHT</ons-input>
+                            </ons-list-item>
+            			</ons-list>
+                	</div>
+            	</ons-dialog>
+            </ons-template>	
+        </ons-page>
+    </ons-navigator>
+</ons-page>

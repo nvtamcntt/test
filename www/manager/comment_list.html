@@ -1,0 +1,22 @@
+<ons-page class="notice" ng-controller="edit_NoticeListController">
+	<ons-toolbar >
+		<div class="left">
+			<div class="btn" ng-click="menuOpen();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
+		</div>
+		
+		<div class="center h100 flex flex_center_align-items">
+			<span class="text_center font20 c_white">Thêm góp ý</span>
+		</div>
+	</ons-toolbar>
+	<div class="card box" ng-repeat="notice in notice_list" ng-click="click($index)">
+		<div class="flex">
+			<div class="flex_left font12">{{ notice.user_name}}</div>
+			<div class="flex_right font12">{{ notice.date}}</div>
+			
+		</div>
+		<div class="bold mb08 kaigyo break_word">{{notice.content}}</div>
+	</div>
+
+	<div class="flex_center_align-items flex_center align_c mt40"><ons-button class="w50 align_c border c_border_green b_white" ng-click="add_comment()"><span class="c_green">Thêm góp ý</span></ons-button></div>
+</br>
+</ons-page>

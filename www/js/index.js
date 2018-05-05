@@ -7,7 +7,7 @@
 
 	//var host = "https://www.sportrai.net";
 
-	var host = "http://localhost";
+	var host = "http://35.185.100.173/";
 	var module = ons.bootstrap('app', ['onsen','mobiscroll-select','mobiscroll-number','mobiscroll-datetime','mobiscroll-widget','mobiscroll-numpad'])
   	.run(['$anchorScroll', function($anchorScroll) {
 		$anchorScroll.yOffset = 100;   // always scroll by 50 extra pixels

@@ -30,8 +30,14 @@
 .c_red {
     color: #E50150;
 }
+.c_green_1 {
+    color: #83B42E;
+}
 .c_black {
     color: #000000;
+}
+.c_green {
+    color: #4d81ed;
 }
 .c_orange {
 	color: orange;
@@ -116,4 +122,7 @@
 }
 .c27{
 	color: #4d81ed;
+}
+.c_line_blue{
+	color: #2F74CD;
 }

@@ -1,0 +1,138 @@
+<ons-page class="trainer_list" ng-controller="GameSettingController">
+	<ons-toolbar >
+		<!-- <div class="left">
+			<div class="btn" ng-click="tl.menu.toggleMenu();"><img src="images/common/btn_menu.png" alt="" class="bargar"></div>
+		</div> -->
+		<div class="left">
+			<div class="btn" ng-click="back()"><img src="images/back1.png" alt="" style="margin-left: -1rem;" class="bargar"></div>
+		</div>
+		<div class="center h100 flex flex_center_align-items">
+			<span class="text_center font20 c_white">Trắc nghiệm</span>
+		</div>
+
+	</ons-toolbar>
+	<!-- ng-repeat="item in items" -->
+	<div class=" w100 h100">
+		<div class="center align_c h10 pt28 font16 text_over normal c_umain">
+			<span>CHỌN CÁCH HỌC</span>
+		</div>
+		<div class="" ng-model="check_type_box"> 
+			<div class="flex box" ng-class="" ng-click="list_check(1)">
+				<div class="center flex1 ml24  c_black" ng-class="">
+					Kanji - Nghĩa
+				</div>
+				<div class="right">
+					<input type="checkbox" class="check1"  name="check_type_name" value="1" ng-model="check_type1" >
+				</div>
+			</div>
+
+			<div class="flex box" ng-class="" ng-click="list_check(2)">
+				<div class="center flex1 ml24  c_black" ng-class="">
+					Nghĩa - Kanji
+				</div>
+				<div class="right">
+					<input type="checkbox" class="check1" name="check_type_name" value="2" ng-model="check_type2" >
+				</div>
+			</div>
+
+			<div class="flex box" ng-class="" ng-click="list_check(3)">
+				<div class="center flex1 ml24  c_black" ng-class="">
+					Nghĩa - hiragana
+				</div>
+				<div class="right">
+					<input type="checkbox" class="check1" name="check_type_name" value="3" ng-model="check_type3" >
+				</div>
+			</div>
+
+			<div class="flex box" ng-class="" ng-click="list_check(4)">
+				<div class="center flex1 ml24  c_black" ng-class="">
+					hiragana - Nghĩa
+				</div>
+				<div class="right">
+					<input type="checkbox" class="check1" name="check_type_name" value="4" ng-model="check_type4" >
+				</div>
+			</div>
+		</div>
+
+		<div class="ml30 select_box mobi mt12 w80 align_c center">
+			<select ng-model="select_level"  mobiscroll-select="area_sel_set" mobiscroll-instance="area_sel_in">
+				<optgroup label="N3">
+					<option value="N3 1" label="Bài 1">N3 Bài 1</option>
+					<option value="N3 2" label="Bài 2">N3 Bài 2</option>
+					<option value="N3 2" label="Bài 3">N3 Bài 3</option>
+					<option value="N3 4" label="Bài 4">N3 Bài 4</option>
+					<option value="N3 5" label="Bài 5">N3 Bài 5</option>
+					<option value="N3 6" label="Bài 6">N3 Bài 6</option>
+					<option value="N3 7" label="Bài 7">N3 Bài 7</option>
+					<option value="N3 8" label="Bài 8">N3 Bài 8</option>
+					<option value="N3 9" label="Bài 9">N3 Bài 9</option>
+					<option value="N3 10" label="Bài 10">N3 Bài 10</option>
+					<option value="N3 11" label="Bài 11">N3 Bài 11</option>
+					<option value="N3 12" label="Bài 12">N3 Bài 12</option>
+					<option value="N3 13" label="Bài 13">N3 Bài 13</option>
+				</optgroup>
+				<optgroup label="N2">
+					<option value="N2 14" label="Bài 1">N2 Bài 1</option>
+					<option value="N2 15" label="Bài 2">N2 Bài 2</option>
+					<option value="N2 16" label="Bài 3">N2 Bài 3</option>
+					<option value="N2 17" label="Bài 4">N2 Bài 4</option>
+					<option value="N2 18" label="Bài 5">N2 Bài 5</option>
+					<option value="N2 19" label="Bài 6">N2 Bài 6</option>
+					<option value="N2 20" label="Bài 7">N2 Bài 7</option>
+					<option value="N2 21" label="Bài 8">N2 Bài 8</option>
+					<option value="N2 22" label="Bài 9">N2 Bài 9</option>
+					<option value="N2 23" label="Bài 10">N2 Bài 10</option>
+					<option value="N2 24" label="Bài 11">N2 Bài 11</option>
+					<option value="N2 25" label="Bài 12">N2 Bài 12</option>
+					<option value="N2 26" label="Bài 13">N2 Bài 13</option>
+					<option value="N2 27" label="Bài 14">N2 Bài 14</option>
+				</optgroup>
+			</select>
+<!-- 				<optgroup label="N3">
+					<option value="N3 1,70" label="Bài 1">Bài 1</option>
+					<option value="N3 70,140" label="Bài 2">Bài 2</option>
+					<option value="N3 140,210" label="Bài 3">Bài 3</option>
+					<option value="N3 210,280" label="Bài 4">Bài 4</option>
+					<option value="N3 280,340" label="Bài 5">Bài 5</option>
+					<option value="N3 340,410" label="Bài 6">Bài 6</option>
+					<option value="N3 410,480" label="Bài 7">Bài 7</option>
+					<option value="N3 480,550" label="Bài 8">Bài 8</option>
+					<option value="N3 550,620" label="Bài 9">Bài 9</option>
+					<option value="N3 620,690" label="Bài 10">Bài 10</option>
+					<option value="N3 690,770" label="Bài 11">Bài 11</option>
+					<option value="N3 770,820" label="Bài 12">Bài 12</option>
+					<option value="N3 820,880" label="Bài 13">Bài 13</option>
+				</optgroup>
+				<optgroup label="N2">
+					<option value="N2 1,100" label="Bài 1">Bài 1</option>
+					<option value="N2 100,200" label="Bài 2">Bài 2</option>
+					<option value="N2 200,300" label="Bài 3">Bài 3</option>
+					<option value="N2 300,400" label="Bài 4">Bài 4</option>
+					<option value="N2 400,500" label="Bài 5">Bài 5</option>
+					<option value="N2 500,600" label="Bài 6">Bài 6</option>
+					<option value="N2 600,700" label="Bài 7">Bài 7</option>
+					<option value="N2 700,800" label="Bài 8">Bài 8</option>
+					<option value="N2 800,900" label="Bài 9">Bài 9</option>
+					<option value="N2 900,950" label="Bài 10">Bài 10</option>
+					<option value="N2 950,1000" label="Bài 11">Bài 11</option>
+					<option value="N2 1000,1050" label="Bài 12">Bài 12</option>
+					<option value="N2 1050,1100" label="Bài 13">Bài 13</option>
+					<option value="N2 1100,1150" label="Bài 14">Bài 14</option>
+				</optgroup>
+			</select> -->
+		</div>
+			<!-- <h3 class="ml30 font16">Cấp độ</h3> -->
+		<!-- 	<div class="font16 mt08 ml30">
+				<input type="radio" value="n3" name="level_check" id="radio1" ng-model="level_check1">
+				<label for="radio1" class="radio">N3</label>
+				
+			</div>
+			<div class="font16 ml30">
+				<input type="radio" value="n2" name="level_check" id="radio2" ng-model="level_check2">
+				<label for="radio2" class="radio">N2</label>
+			</div> -->
+
+	    <div class="flex_center_align-items flex_center align_c mt40"><ons-button class="w50 align_c border c_border_green b_white" ng-click="start_game()"><span class="c_green">Bắt đầu học</span></ons-button></div>
+	</div>
+
+</ons-page>

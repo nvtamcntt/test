@@ -1,0 +1,24 @@
+<ons-dialog  var="dialog_favorit_add" cancelable  ng-controller="DialogFavoritController">
+	<div class="w100 h100 z1 p_left0 p_top0 flex flex_direction b_gray4">
+		<div class="flex mb12 mt12 box">
+			<span class="c_black">Tao mới danh mục yêu thích</span>
+		</div>
+		<div class="flex mb12 b_white" >
+			<!-- <div class="flex_right">
+				<ons-button class="square28 b_none p0" ng-click="dialog_favorit.hide()"><img src="images/close.png" class="w100 h100"></ons-button>
+			</div> -->
+			<div class="w100">
+				<input type="text" maxlength="100" ng-model="favorit_input" placeholder="Nhập vào nội dung"/>
+			</div>
+		</div>
+		<div class="flex mb12">
+			<div class=" align_l mr30">
+				<ons-button ng-click="cancel()" class="font14 pl20 pr20"  ng-class="b_color">Cancel</ons-button>
+			</div>
+			<div class=" align_r mr60">
+				<ons-button ng-click="ok()" class="font14 pl20 pr20"  ng-class="b_color">OK</ons-button>
+			</div>
+		</div>
+	</div>
+	<div class="h100 b_black opa08"></div>
+</ons-dialog>

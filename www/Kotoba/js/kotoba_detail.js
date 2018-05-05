@@ -6,8 +6,9 @@ module.controller('KotobaDetailController', ['$scope', '$http', '$sce','$rootSco
 	var kotoba = ParamList_R['kotoba'];
 	var lession = ParamList_R['lession'];
 	var index = ParamList_R['index'];
-	// console.log(ParamList_R['list_kotoba']);
+	// //console.log(ParamList_R['list_kotoba']);
 	var list = refresh_list(ParamList_R['list_kotoba']);
+
 	$scope.list_kotoba = list;
 	// $scope.view_number = kotoba.number;
 	// $scope.view_kanji = kotoba.kanji;
@@ -33,6 +34,7 @@ module.controller('KotobaDetailController', ['$scope', '$http', '$sce','$rootSco
 		var tuongtu = [];
 		var hopnghia = [];
 		var lienquan = [];
+		if (list)
 		for (var i = 0; i < list.length; i++) {
 			trainghia = xuly_tu(list[i].trainghia);
 			list[i].trainghia = trainghia;
@@ -42,6 +44,8 @@ module.controller('KotobaDetailController', ['$scope', '$http', '$sce','$rootSco
 			list[i].hopnghia = hopnghia;
 			lienquan = xuly_tu(list[i].lienquan);
 			list[i].lienquan = lienquan;
+			if (list[i].hanviet)
+				list[i].hanviet = list[i].hanviet.toUpperCase();
 		}
 		return list;
 	}
@@ -86,7 +90,7 @@ module.controller('KotobaDetailController', ['$scope', '$http', '$sce','$rootSco
 	});
 	ons.ready(function() {
 	  	var carousel = document.addEventListener('postchange', function(event) {
-	    	console.log('Changed to ' + event.activeIndex)
+	    	//console.log('Changed to ' + event.activeIndex)
 	  	});
 	});
 	/*----------------------------------------------------------*/
